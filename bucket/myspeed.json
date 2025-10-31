@@ -18,8 +18,8 @@
     },
     "installer": {
         "script": [
-            "Set-Content -Path \"$dir\\myspeed_start.ps1\" -Value '$env:NODE_ENV=\"production\"; node server' -Encoding UTF8",
-            "Set-Content -Path \"$dir\\myspeed_stop.ps1\"  -Value 'taskkill /IM node.exe /F' -Encoding UTF8"
+            "Set-Content -Path \"$dir\\myspeed_start.ps1\" -Value \"`$env:NODE_ENV='production'; `$env:Path=[Environment]::GetEnvironmentVariable('Path','User'); Set-Location \\\"$dir\\\"; & node server\" -Encoding ASCII",
+            "Set-Content -Path \"$dir\\myspeed_stop.ps1\" -Value \"taskkill /IM node.exe /F\" -Encoding ASCII"
         ]
     },
     "post_install": [
@@ -30,6 +30,10 @@
         "myspeed_stop.ps1"
     ],
     "persist": "data",
+    "pre_uninstall": [
+        "Write-Host '终止后台进程...';",
+        "Stop-Process -Name node -Force -ErrorAction Ignore"
+    ],
     "checkver": {
         "github": "https://github.com/gnmyt/MySpeed"
     },
