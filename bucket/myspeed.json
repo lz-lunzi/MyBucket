@@ -1,0 +1,43 @@
+{
+    "version": "1.0.9",
+    "description": "A speed test analysis software that shows your internet speed for up to 30 days",
+    "homepage": "https://myspeed.dev",
+    "license": "MIT",
+    "notes": [
+        "Usage:",
+        "1. Run 'myspeed_start' to start the server",
+        "2. Open http://localhost:5216 in browser",
+        "3. Run 'myspeed_stop' to stop server"
+    ],
+    "depends": "nodejs18",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gnmyt/MySpeed/releases/download/v1.0.9/MySpeed-1.0.9.zip",
+            "hash": "7cc615c146c00d4e3f35109e7c0cc153255248a3d26254195897e7514bccc182"
+        }
+    },
+    "installer": {
+        "script": [
+            "Set-Content -Path \"$dir\\myspeed_start.ps1\" -Value '$env:NODE_ENV=\"production\"; node server' -Encoding UTF8",
+            "Set-Content -Path \"$dir\\myspeed_stop.ps1\"  -Value 'taskkill /IM node.exe /F' -Encoding UTF8"
+        ]
+    },
+    "post_install": [
+        "Write-Host 'Installing dependencies...'; cd $dir; npm install"
+    ],
+    "bin": [
+        "myspeed_start.ps1",
+        "myspeed_stop.ps1"
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/gnmyt/MySpeed"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gnmyt/MySpeed/releases/download/v$version/MySpeed-$version.zip"
+            }
+        }
+    }
+}
