@@ -22,10 +22,7 @@
             "Set-Content -Path \"$dir\\myspeed_stop.ps1\"  -Value 'taskkill /IM node.exe /F' -Encoding UTF8"
         ]
     },
-    "post_install": [
-        "Write-Host 'Installing dependencies...'; $actual=(Resolve-Path -LiteralPath \"$dir\" -ErrorAction Stop).Path; if (-not (Test-Path $actual)) { Write-Host \"Directory '$actual' not found, skipping npm\"; exit 0 }; Set-Location -LiteralPath $actual; npm install"
-
-    ],
+    "post_install": "Write-Host 'Installing dependencies...'; $actual=(Resolve-Path -LiteralPath \"$dir\" -ErrorAction Stop).Path; if (-not (Test-Path $actual)) { Write-Host \"Directory '$actual' not found, skipping npm\"; exit 0 }; Set-Location -LiteralPath $actual; npm install",
     "bin": [
         "myspeed_start.ps1",
         "myspeed_stop.ps1"
