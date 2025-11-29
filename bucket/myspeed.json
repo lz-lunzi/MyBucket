@@ -27,6 +27,16 @@
         "myspeed_start.ps1",
         "myspeed_stop.ps1"
     ],
+    "shortcuts": [
+        [
+            "myspeed_start.ps1",
+            "MySpeed Start"
+        ],
+        [
+            "myspeed_stop.ps1",
+            "MySpeed Stop"
+        ]
+    ],
     "persist": "data",
     "checkver": {
         "github": "https://github.com/gnmyt/MySpeed"
@@ -36,6 +46,12 @@
             "64bit": {
                 "url": "https://github.com/gnmyt/MySpeed/releases/download/v$version/MySpeed-$version.zip"
             }
-        }
+        },
+        "notes": [
+            "Usage:",
+            "1. Run 'myspeed_start' to start the server",
+            "2. Open http://localhost:5216 in browser",
+            "3. Run 'myspeed_stop' to stop server"
+        ]
     }
 }

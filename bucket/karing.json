@@ -11,6 +11,7 @@
             "Karing"
         ]
     ],
+    "bin": "karing.exe",
     "persist": "profiles",
     "pre_uninstall": [
         "$bucket = $install.bucket",

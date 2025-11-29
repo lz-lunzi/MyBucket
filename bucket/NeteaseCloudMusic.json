@@ -31,7 +31,7 @@
             "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
             "Remove-Module -Name DoradoUtils"
         ]
-    },
+    ],
     "bin": "cloudmusic.exe",
     "shortcuts": [
         [
@@ -39,6 +39,7 @@
             "NeteaseCloudMusic"
         ]
     ],
+    "persist": "appdata",
     "checkver": {
         "url": "https://music.163.com/api/appcustomconfig/get",
         "jsonpath": "$.data.web-new-download.pc64.downloadUrl",
