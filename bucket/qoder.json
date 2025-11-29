@@ -42,7 +42,8 @@
     ],
     "persist": "data",
     "checkver": {
-        "url": "https://qoder.com/changelog"
+        "url": "https://qoder.com/changelog",
+        "regex": "Version ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

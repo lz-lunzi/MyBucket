@@ -22,6 +22,6 @@
         "regex": "/change-log/([\\d.]+).md"
     },
     "autoupdate": {
-        "url": "https://download.pixpinapp.com/PixPin_$version.zip"
+        "url": "https://download.pixpin.cn/PixPin_$version.zip"
     }
 }

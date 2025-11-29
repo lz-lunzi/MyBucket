@@ -26,8 +26,8 @@
     "post_install": "Remove-Item \"$dir\\Devolutions.Updater*\" -Force",
     "notes": "Remote Desktop Manager is NOT portable.",
     "checkver": {
-        "url": "https://devolutions.net/products.htm/",
-        "regex": "RDMFree.Version=([\\d.]+)"
+        "url": "https://devolutions.net/remote-desktop-manager/",
+        "regex": "Version ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.Bin.$version.zip"
