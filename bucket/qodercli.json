@@ -1,0 +1,33 @@
+{
+    "version": "0.1.13",
+    "description": "Qoder CLI tool for Windows",
+    "homepage": "https://qoder.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.qoder.com/qodercli/releases/0.1.13/qodercli_0.1.13_windows_amd64.zip",
+            "hash": "5a38e14029da94d9e223461123fac61881e3cd3c72ead3fc672867c9801ab37e"
+        }
+    },
+    "bin": "qodercli.exe",
+    "checkver": {
+        "url": "https://qoder-ide.oss-ap-southeast-1.aliyuncs.com/qodercli/channels/manifest.json",
+        "regex": "qodercli_(\\d+\\.\\d+\\.\\d+)_windows_amd64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.qoder.com/qodercli/releases/$version/qodercli_$version_windows_amd64.zip"
+            }
+        }
+    },
+    "post_install": [
+        "cmd /c mklink /J \"$dir\\..\\current\" \"$dir\""
+    ],
+    "pre_uninstall": [
+        "Stop-Process -Name node -Force -ErrorAction Ignore",
+        "Get-CimInstance -ClassName Win32_Process | Where-Object { $_.ExecutablePath -like \"$dir\\*\" } | ForEach-Object { $_.Terminate() | Out-Null }",
+        "Start-Sleep -Seconds 3",
+        "Remove-Item -Path \"$dir\\..\\current\" -Force -Recurse -ErrorAction Ignore"
+    ]
+}
