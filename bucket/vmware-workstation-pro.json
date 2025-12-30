@@ -1,0 +1,33 @@
+{
+    "version": "17.5.2",
+    "description": "VMware Workstation Pro - The industry standard for running multiple operating systems as virtual machines on a single Linux or Windows PC",
+    "homepage": "https://www.broadcom.com/products/vmware-workstation-pro",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/info-only/ws-windows/8.0.0/VMware-Workstation-Pro-17.5.2-24285374.x86_64.bundle#/dl.7z",
+            "hash": ""
+        }
+    },
+    "bin": "vmware.exe",
+    "shortcuts": [
+        [
+            "vmware.exe",
+            "VMware Workstation Pro"
+        ]
+    ],
+    "checkver": {
+        "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/ws-windows.xml",
+        "regex": "ws-windows\\s+([\\d.]+)\\s+info-only"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://softwareupdate.broadcom.com/cds/vmw-desktop/info-only/ws-windows/$version/VMware-Workstation-Pro-$version-*.x86_64.bundle#/dl.7z",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    }
+}
