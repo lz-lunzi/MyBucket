@@ -1,8 +1,14 @@
 on:
   workflow_dispatch:
   schedule:
-    # run every 4 hours
-    - cron: '20 */4 * * *'
+    # run every 5 days at 00:00 China time (16:00 UTC previous day)
+    - cron: '0 16 */5 * *'
+  push:
+    branches:
+      - 'main'
+      - 'master'
+    paths:
+      - '.github/workflows/excavator.yml'
 name: Excavator
 jobs:
   excavate:
@@ -14,4 +20,3 @@ jobs:
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SKIP_UPDATED: 1
