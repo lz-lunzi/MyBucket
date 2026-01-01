@@ -6,20 +6,22 @@
         "identifier": "MIT",
         "url": "https://github.com/BloopAI/vibe-kanban/blob/main/LICENSE"
     },
-    "depends": "nodejs-lts",
+    "depends": "nodejs",
     "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-0.0.143.tgz",
-    "hash": "",
+    "hash": "1043FDE3DAA980CDF4FBB7874C3A187D6E261455E6BABF6730D2944BB8BD364B",
     "installer": {
-        "script": "npm install -g $dir/vibe-kanban-*.tgz"
+        "script": "npm install -g vibe-kanban"
     },
     "uninstaller": {
         "script": "npm uninstall -g vibe-kanban"
     },
+    "bin": "vibe-kanban",
     "checkver": {
-        "url": "https://www.vibekanban.com/",
-        "regex": "v([\\d.]+) out now"
+        "url": "https://registry.npmjs.org/vibe-kanban",
+        "regex": "\"latest\":\\s*\"([\\d.]+)\""
     },
     "autoupdate": {
-        "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-$version.tgz"
+        "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-$version.tgz",
+        "hash": "SHA256"
     }
 }
