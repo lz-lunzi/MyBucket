@@ -11,7 +11,9 @@
             "installer": {
                 "script": [
                     "Write-Host 'Extracting 7z SFX archive...' -ForegroundColor Green",
-                    "Start-Process -FilePath $cached -ArgumentList 'x', '-y', '-o' + $dir -Wait -NoNewWindow"
+                    "$file = Get-ChildItem -Path $dir -Filter 'Auto-Claude-*.exe' | Select-Object -First 1",
+                    "if (-not $file) { Write-Error 'Could not find Auto-Claude installation file'; exit 1 }",
+                    "Start-Process -FilePath $file.FullName -ArgumentList 'x', '-y', '-o' + $dir -Wait -NoNewWindow"
                 ]
             }
         }
