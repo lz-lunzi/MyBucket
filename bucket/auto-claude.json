@@ -41,6 +41,7 @@
         "For detailed setup instructions, visit:",
         "https://github.com/AndyMik90/Auto-Claude#prerequisites"
     ],
+    "bin": "Auto-Claude.exe",
     "shortcuts": [
         [
             "Auto-Claude.exe",
