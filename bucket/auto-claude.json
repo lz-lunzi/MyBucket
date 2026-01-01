@@ -1,24 +1,61 @@
 {
     "version": "2.7.1",
-    "description": "Automate Claude AI interactions",
+    "description": "Autonomous multi-session AI coding framework with desktop UI",
     "homepage": "https://github.com/AndyMik90/Auto-Claude",
-    "license": "Apache-2.0",
+    "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe#/dl.7z",
-            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605"
+            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe",
+            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605",
+            "installer": {
+                "script": [
+                    "Write-Host 'Auto-Claude installation started' -ForegroundColor Green",
+                    "Write-Host 'Extracting application files from installer...' -ForegroundColor Yellow",
+                    "$pluginsDir = Join-Path $dir '$PLUGINSDIR'",
+                    "$app7z = Join-Path $pluginsDir 'app-64.7z'",
+                    "if (Test-Path $app7z) {",
+                    "    Write-Host \"Found app archive: $($app7z)\"",
+                    "    7z x -y $app7z -o\"$dir\"",
+                    "    Write-Host 'Application files extracted successfully'",
+                    "    Write-Host 'Auto-Claude.exe extracted successfully'",
+                    "} else {",
+                    "    Write-Error 'App archive not found in installer'",
+                    "}",
+                    "Write-Host 'Cleaning up installer files...' -ForegroundColor Yellow",
+                    "Remove-Item $pluginsDir -Recurse -Force -ErrorAction SilentlyContinue",
+                    "Remove-Item (Join-Path $dir '$R0') -Recurse -Force -ErrorAction SilentlyContinue",
+                    "Write-Host 'Installation completed.' -ForegroundColor Green"
+                ]
+            }
         }
     },
-    "installer": {
-        "script": "Get-ChildItem \"$dir\\$PLUGINSDIR\\*.7z\" | ForEach-Object { 7z x -y $_.FullName -o\"$dir\" }"
-    },
-    "bin": "Auto-Claude.exe",
+    "notes": [
+        "Auto-Claude requires the following prerequisites:",
+        "1. Node.js 18+ - Download from nodejs.org",
+        "2. Python 3.10+ - Download from python.org",
+        "3. Docker Desktop - Required for Memory Layer",
+        "4. Git repository in your project",
+        "5. Claude Code CLI - npm install -g @anthropic-ai/claude-code",
+        "6. Claude Pro/Max subscription for Claude Code access",
+        "",
+        "For detailed setup instructions, visit:",
+        "https://github.com/AndyMik90/Auto-Claude#prerequisites"
+    ],
+    "shortcuts": [
+        [
+            "Auto-Claude.exe",
+            "Auto Claude"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe#/dl.7z"
+                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe"
             }
+        },
+        "hash": {
+            "mode": "download"
         }
     }
 }
