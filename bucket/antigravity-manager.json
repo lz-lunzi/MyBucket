@@ -11,13 +11,13 @@
     },
     "bin": [
         [
-            "Antigravity.Tools.exe",
+            "antigravity_tools.exe",
             "antigravity-manager"
         ]
     ],
     "shortcuts": [
         [
-            "Antigravity.Tools.exe",
+            "antigravity_tools.exe",
             "Antigravity Manager"
         ]
     ],
