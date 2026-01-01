@@ -5,14 +5,15 @@
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe",
+            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe#/dl.7z",
 
             "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605",
             "installer": {
                 "script": [
                     "Write-Host 'Installing Auto-Claude to Scoop directory...' -ForegroundColor Green",
-                    "Write-Host 'Silent installation with custom directory...' -ForegroundColor Yellow",
-                    "& $cached /S /D=$dir",
+                    "Write-Host 'Extracting application files...' -ForegroundColor Yellow",
+                    "Get-ChildItem "$dir\$PLUGINSDIR" | Move-Item -Destination "$dir" -Force",
+                    "Remove-Item "$dir\$PLUGINSDIR", "$dir\$R0" -Recurse -Force -ErrorAction SilentlyContinue",
                     "Write-Host 'Installation completed to Scoop directory!' -ForegroundColor Green"
                 ]
             }
@@ -30,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe"
+                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe#/dl.7z"
             }
         },
         "hash": {
