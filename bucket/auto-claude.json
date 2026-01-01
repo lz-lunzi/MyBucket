@@ -9,12 +9,10 @@
             "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605"
         }
     },
-    "shortcuts": [
-        [
-            "Auto-Claude.exe",
-            "Auto-Claude"
-        ]
-    ],
+    "installer": {
+        "script": "Get-ChildItem \"$dir\\$PLUGINSDIR\\*.7z\" | ForEach-Object { 7z x -y $_.FullName -o\"$dir\" }"
+    },
+    "bin": "Auto-Claude.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
