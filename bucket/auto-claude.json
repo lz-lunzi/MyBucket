@@ -3,15 +3,18 @@
     "description": "Automate Claude AI interactions",
     "homepage": "https://github.com/AndyMik90/Auto-Claude",
     "license": "Apache-2.0",
-    "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe#/dl.7z",
-    "hash": "",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe#/dl.7z",
-            "hash": ""
+            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605"
         }
     },
-    "bin": "Auto-Claude.exe",
+    "shortcuts": [
+        [
+            "Auto-Claude.exe",
+            "Auto-Claude"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
