@@ -10,9 +10,10 @@
             "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605",
             "installer": {
                 "script": [
-                    "Write-Host 'Extracting Auto-Claude application...' -ForegroundColor Green",
-                    "Get-ChildItem \"$dir\\`$PLUGINSDIR\" | Move-Item -Destination \"$dir\" -Force",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Recurse -Force -ErrorAction SilentlyContinue"
+                    "Write-Host 'Installing Auto-Claude to Scoop directory...' -ForegroundColor Green",
+                    "Write-Host 'Silent installation with custom directory...' -ForegroundColor Yellow",
+                    "& $cached /S /D=$dir",
+                    "Write-Host 'Installation completed to Scoop directory!' -ForegroundColor Green"
                 ]
             }
         }
