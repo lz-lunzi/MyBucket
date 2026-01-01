@@ -5,22 +5,14 @@
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe#/dl.7z",
+            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe",
 
             "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605",
             "installer": {
                 "script": [
-                    "Write-Host 'Extracting app-64.7z from NSIS installer...' -ForegroundColor Green",
-                    "$app7z = Join-Path $dir '$PLUGINSDIR' -ChildPath 'app-64.7z'",
-                    "if (Test-Path $app7z) {",
-                    "  Write-Host 'Found app-64.7z, extracting with 7z...' -ForegroundColor Yellow",
-                    "  & 7z x -y -o$dir $app7z",
-                    "  Remove-Item (Join-Path $dir '$PLUGINSDIR') -Recurse -Force -ErrorAction SilentlyContinue",
-                    "  Remove-Item (Join-Path $dir '$R0') -Recurse -Force -ErrorAction SilentlyContinue",
-                    "  Write-Host 'Auto-Claude application extracted successfully!' -ForegroundColor Green",
-                    "} else {",
-                    "  Write-Warning 'app-64.7z not found'",
-                    "}"
+                    "Write-Host 'Extracting Auto-Claude application...' -ForegroundColor Green",
+                    "Get-ChildItem \"$dir\\`$PLUGINSDIR\" | Move-Item -Destination \"$dir\" -Force",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Recurse -Force -ErrorAction SilentlyContinue"
                 ]
             }
         }
@@ -37,7 +29,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe#/dl.7z"
+                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe"
             }
         },
         "hash": {
