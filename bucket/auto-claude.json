@@ -7,10 +7,15 @@
         "64bit": {
             "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe",
 
-            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605"
+            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605",
+            "installer": {
+                "script": [
+                    "Write-Host 'Extracting 7z SFX archive...' -ForegroundColor Green",
+                    "Start-Process -FilePath $cached -ArgumentList 'x', '-y', '-o' + $dir -Wait -NoNewWindow"
+                ]
+            }
         }
     },
-    "extract_dir": "Auto-Claude-$version-win32-x64",
 
     "bin": "Auto-Claude.exe",
     "shortcuts": [
