@@ -10,23 +10,13 @@
             "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605"
         }
     },
-    "notes": [
-        "Auto-Claude requires the following prerequisites:",
-        "1. Node.js 18+ - Download from nodejs.org",
-        "2. Python 3.10+ - Download from python.org",
-        "3. Docker Desktop - Required for Memory Layer",
-        "4. Git repository in your project",
-        "5. Claude Code CLI - npm install -g @anthropic-ai/claude-code",
-        "6. Claude Pro/Max subscription for Claude Code access",
-        "",
-        "For detailed setup instructions, visit:",
-        "https://github.com/AndyMik90/Auto-Claude#prerequisites"
-    ],
+    "extract_dir": "Auto-Claude-$version-win32-x64",
+
     "bin": "Auto-Claude.exe",
     "shortcuts": [
         [
             "Auto-Claude.exe",
-            "Auto-Claude"
+            "Auto Claude"
         ]
     ],
     "checkver": "github",
