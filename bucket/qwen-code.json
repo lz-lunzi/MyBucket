@@ -3,28 +3,24 @@
     "description": "An open-source AI agent that lives in your terminal",
     "homepage": "https://github.com/QwenLM/qwen-code",
     "license": "Apache-2.0",
-    "depends": "nodejs-lts",
-    "architecture": {
-        "64bit": {
-            "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.6.0.tgz",
-            "hash": ""
-        }
-    },
+    "depends": "nodejs",
+    "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.6.0.tgz",
+    "hash": "6A14D1619390A1A6587073780910A8C9819BABFFDDA1699FD8CA4AC6D63E2B02",
     "installer": {
-        "script": "npm install -g $dir/qwen-code-*.tgz"
+        "script": "npm install -g @qwen-code/qwen-code"
     },
     "uninstaller": {
         "script": "npm uninstall -g @qwen-code/qwen-code"
     },
+    "bin": "qwen",
     "checkver": {
         "url": "https://registry.npmjs.org/@qwen-code/qwen-code",
         "jsonpath": "$['dist-tags'].latest"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-$version.tgz"
-            }
+        "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-$version.tgz",
+        "hash": {
+            "mode": "download"
         }
     }
 }
