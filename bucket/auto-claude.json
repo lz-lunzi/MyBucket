@@ -11,6 +11,21 @@
         }
     },
 
+    "post_install": [
+        "Write-Host 'Extracting app-64.7z from NSIS installer...' -ForegroundColor Green",
+        "$app7z = Join-Path $dir '$PLUGINSDIR\\app-64.7z'",
+        "if (Test-Path $app7z) {",
+        "  Write-Host 'Found app-64.7z, extracting with 7z...' -ForegroundColor Yellow",
+        "  $cmd = '& 7z x -y \"' + $app7z + '\" -o\"' + $dir + '\"'",
+        "  Invoke-Expression $cmd",
+        "  Remove-Item $dir'\\$PLUGINSDIR' -Recurse -Force -ErrorAction SilentlyContinue",
+        "  Remove-Item $dir'\\$R0' -Recurse -Force -ErrorAction SilentlyContinue",
+        "  Write-Host 'Auto-Claude application extracted successfully!' -ForegroundColor Green",
+        "} else {",
+        "  Write-Warning 'app-64.7z not found in $PLUGINSDIR directory'",
+        "}"
+    ],
+
     "bin": "Auto-Claude.exe",
     "shortcuts": [
         [
