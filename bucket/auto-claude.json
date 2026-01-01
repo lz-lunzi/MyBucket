@@ -1,0 +1,16 @@
+{
+    "version": "1.0.0",
+    "description": "Auto-Claude - Automate Claude AI interactions",
+    "homepage": "https://github.com/AndyMik90/Auto-Claude",
+    "license": "Proprietary",
+    "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v1.0.0/auto-claude.zip",
+    "hash": "",
+    "bin": "auto-claude.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/auto-claude.zip",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
