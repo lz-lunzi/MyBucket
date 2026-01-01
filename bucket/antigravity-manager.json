@@ -21,6 +21,13 @@
             "Antigravity Manager"
         ]
     ],
+    "installer": {
+        "script": [
+            "Write-Host 'Moving Antigravity Tools executable to root directory...' -ForegroundColor Green",
+            "Copy-Item \"$dir\\PFiles\\Antigravity Tools\\antigravity_tools.exe\" \"$dir\\antigravity_tools.exe\" -Force",
+            "Write-Host 'Installation completed successfully!' -ForegroundColor Green"
+        ]
+    },
     "checkver": {
         "github": "https://github.com/lbjlaq/Antigravity-Manager/releases",
         "pattern": "Antigravity Tools v([\\d.]+)"
