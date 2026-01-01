@@ -5,8 +5,8 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v3.3.10/Antigravity.Tools_3.3.10_x64-setup.exe",
-            "hash": "sha256:35e20ce9db64981e79068941e10535d2a39b381b9604f1b41c77715a5956557c"
+            "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v3.3.10/Antigravity.Tools_3.3.10_x64_en-US.msi",
+            "hash": "sha256:2F87ADAD6C46D1ACA3A68227E3CDB4CFEA5ECB2C656D1B81E65DEC91FDD39889"
         }
     },
     "bin": [
@@ -28,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v$version/Antigravity.Tools_$version_x64-setup.exe"
+                "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v$version/Antigravity.Tools_$version_x64_en-US.msi"
             }
         },
         "hash": {
