@@ -5,20 +5,9 @@
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe",
+            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.1/Auto-Claude-2.7.1-win32-x64.exe#/dl.7z",
 
-            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605",
-            "installer": {
-                "script": [
-                    "Write-Host 'Extracting 7z SFX archive...' -ForegroundColor Green",
-                    "$file = Get-ChildItem -Path $dir -Filter 'Auto-Claude-*.exe' | Select-Object -First 1",
-                    "if (-not $file) { Write-Error 'Could not find Auto-Claude installation file'; exit 1 }",
-                    "Write-Host 'Found installation file:' $file.FullName -ForegroundColor Yellow",
-                    "$outputDir = $dir",
-                    "$cmd = '& \"' + $file.FullName + '\" x -y -o\"' + $outputDir + '\"'",
-                    "Invoke-Expression $cmd"
-                ]
-            }
+            "hash": "0c0ce3686313a58d2d60bca5c9a0ad0ca6060784d15c6e5f6b37cc8cba5e9605"
         }
     },
 
@@ -33,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe"
+                "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v$version/Auto-Claude-$version-win32-x64.exe#/dl.7z"
             }
         },
         "hash": {
