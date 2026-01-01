@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v3.3.10/Antigravity.Tools_3.3.10_x64-setup.exe",
-            "hash": "sha256:TODO_ADD_HASH_AFTER_TESTING"
+            "hash": "sha256:35e20ce9db64981e79068941e10535d2a39b381b9604f1b41c77715a5956557c"
         }
     },
     "bin": [
