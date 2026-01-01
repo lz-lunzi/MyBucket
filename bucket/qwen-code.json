@@ -7,12 +7,36 @@
     "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.6.0.tgz",
     "hash": "6A14D1619390A1A6587073780910A8C9819BABFFDDA1699FD8CA4AC6D63E2B02",
     "installer": {
-        "script": "npm install -g @qwen-code/qwen-code"
+        "script": [
+            "Write-Host 'Installing qwen-code globally via npm...' -ForegroundColor Green",
+            "npm install -g @qwen-code/qwen-code",
+            "if ($LASTEXITCODE -eq 0) {",
+            "  Write-Host 'qwen-code installed successfully!' -ForegroundColor Green",
+            "  Write-Host 'Testing qwen command...' -ForegroundColor Yellow",
+            "  qwen --version",
+            "  if ($LASTEXITCODE -ne 0) {",
+            "    Write-Warning 'qwen command test failed, but installation succeeded'",
+            "  }",
+            "} else {",
+            "  Write-Error 'Failed to install qwen-code via npm'",
+            "  exit 1",
+            "}"
+        ]
     },
     "uninstaller": {
-        "script": "npm uninstall -g @qwen-code/qwen-code"
+        "script": [
+            "Write-Host 'Uninstalling qwen-code globally...' -ForegroundColor Yellow",
+            "npm uninstall -g @qwen-code/qwen-code",
+            "Write-Host 'qwen-code uninstalled successfully!' -ForegroundColor Green"
+        ]
     },
     "bin": "qwen",
+    "notes": [
+        "This package installs qwen-code globally via npm.",
+        "Use 'qwen' command directly after installation.",
+        "Update: scoop update qwen-code",
+        "Uninstall: scoop uninstall qwen-code"
+    ],
     "checkver": {
         "url": "https://registry.npmjs.org/@qwen-code/qwen-code",
         "jsonpath": "$['dist-tags'].latest"
