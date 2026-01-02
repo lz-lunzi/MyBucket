@@ -5,7 +5,7 @@
     "license": "MIT",
     "url": "https://github.com/leonvanzyl/autonomous-coding/archive/refs/heads/main.zip",
     "bin": [
-        "autonomous_agent_demo.py"
+        "start.bat"
     ],
     "installer": {
         "script": [
@@ -66,7 +66,7 @@
             "",
             "# Run the autonomous coding demo",
             "try {",
-            "    & python \"$PSScriptRoot\\autonomous_agent_demo.py\" @args",
+            "    & \"$PSScriptRoot\\start.bat\" @args",
             "} catch {",
             "    Write-Host 'Error running autonomous coding demo:' -ForegroundColor Red",
             "    Write-Host $_.Exception.Message -ForegroundColor Yellow",
@@ -109,11 +109,11 @@
             "Option 1: Use the PowerShell script",
             "   .\\run-autonomous-coding.ps1",
             "",
-            "Option 2: Run directly with Python",
-            "   python autonomous_agent_demo.py --project-dir ./my_project",
+            "Option 2: Run directly",
+            "   .\\start.bat --project-dir ./my_project",
             "",
             "For testing (limited iterations):",
-            "   python autonomous_agent_demo.py --project-dir ./my_project --max-iterations 3",
+            "   .\\start.bat --project-dir ./my_project --max-iterations 3",
             "",
             "IMPORTANT NOTES:",
             "--------------",
@@ -127,14 +127,14 @@
             "",
             "Write-Host 'Autonomous Coding installed successfully!' -ForegroundColor Green",
             "Write-Host 'Please read SETUP-INSTRUCTIONS.txt for detailed setup steps.' -ForegroundColor Yellow",
-            "Write-Host 'Run: .\\run-autonomous-coding.ps1 to get started.' -ForegroundColor Yellow"
+            "Write-Host 'Run: .\\start.bat to get started.' -ForegroundColor Yellow"
         ]
     },
     "notes": [
         "Autonomous Coding - Claude Agent SDK Demo installed!",
         "Requires: Node.js, Claude Code CLI, and API credentials",
         "Read SETUP-INSTRUCTIONS.txt for detailed setup steps",
-        "Run: .\\run-autonomous-coding.ps1 to start"
+        "Run: .\\start.bat to start"
     ],
     "checkver": {
         "url": "https://api.github.com/repos/leonvanzyl/autonomous-coding/commits/main",
