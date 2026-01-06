@@ -1,5 +1,5 @@
 {
-    "version": "0.0.143",
+    "version": "0.0.144",
     "description": "Orchestrate AI coding agents in parallel without conflicts, and perform code review through diff tool",
     "homepage": "https://www.vibekanban.com/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://github.com/BloopAI/vibe-kanban/blob/main/LICENSE"
     },
     "depends": "nodejs",
-    "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-0.0.143.tgz",
-    "hash": "1043FDE3DAA980CDF4FBB7874C3A187D6E261455E6BABF6730D2944BB8BD364B",
+    "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-0.0.144.tgz",
+    "hash": "3256226652b2b0273df6d86e7f74f339b98ac5b3d4bcf72077dbe9f869cc7c78",
     "installer": {
         "script": "npm install -g vibe-kanban"
     },
