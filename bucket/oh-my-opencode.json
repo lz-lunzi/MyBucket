@@ -1,0 +1,32 @@
+{
+    "version": "2.14.0",
+    "description": "OpenCode plugin - custom agents (oracle, librarian) and enhanced features. The Best Agent Harness with Sisyphus for autonomous coding",
+    "homepage": "https://github.com/code-yeongyu/oh-my-opencode",
+    "license": "MIT",
+    "depends": "nodejs",
+    "url": "https://registry.npmjs.org/oh-my-opencode/-/oh-my-opencode-2.14.0.tgz",
+    "hash": "SHA256",
+    "installer": {
+        "script": "npm install -g oh-my-opencode"
+    },
+    "uninstaller": {
+        "script": "npm uninstall -g oh-my-opencode"
+    },
+    "bin": "oh-my-opencode",
+    "notes": [
+        "oh-my-opencode installed successfully!",
+        "Run 'oh-my-opencode install' to start the interactive installer.",
+        "Configure your Claude, ChatGPT, and Gemini subscriptions after installation.",
+        "Documentation: https://github.com/code-yeongyu/oh-my-opencode",
+        "Update: scoop update oh-my-opencode",
+        "Uninstall: scoop uninstall oh-my-opencode"
+    ],
+    "checkver": {
+        "url": "https://registry.npmjs.org/oh-my-opencode",
+        "jsonpath": "$['dist-tags'].latest"
+    },
+    "autoupdate": {
+        "url": "https://registry.npmjs.org/oh-my-opencode/-/oh-my-opencode-$version.tgz",
+        "hash": "SHA256"
+    }
+}
