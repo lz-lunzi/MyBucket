@@ -8,7 +8,7 @@
         "python"
     ],
     "url": "https://registry.npmjs.org/uipro-cli/-/uipro-cli-1.5.0.tgz",
-    "hash": "SHA256",
+    "hash": "ce69c3931c6f8bbff9b5c92efd21fa48492365871186167059d19b738e03a142",
     "installer": {
         "script": "npm install -g uipro-cli"
     },
