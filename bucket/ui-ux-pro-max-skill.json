@@ -1,0 +1,52 @@
+{
+    "version": "1.5.0",
+    "description": "CLI to install UI/UX Pro Max skill for AI coding assistants. Provides design intelligence for building professional UI/UX across multiple platforms and frameworks",
+    "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "license": "MIT",
+    "depends": [
+        "nodejs",
+        "python"
+    ],
+    "url": "https://registry.npmjs.org/uipro-cli/-/uipro-cli-1.5.0.tgz",
+    "hash": "SHA256",
+    "installer": {
+        "script": "npm install -g uipro-cli"
+    },
+    "uninstaller": {
+        "script": "npm uninstall -g uipro-cli"
+    },
+    "bin": "uipro",
+    "notes": [
+        "UI/UX Pro Max skill installed successfully!",
+        "Usage: uipro init --ai <assistant>",
+        "",
+        "Available assistants:",
+        "  claude    - Claude Code",
+        "  cursor    - Cursor",
+        "  windsurf  - Windsurf",
+        "  antigravity - Antigravity (.agent + .shared)",
+        "  copilot   - GitHub Copilot",
+        "  kiro      - Kiro",
+        "  codex     - Codex (Skills)",
+        "  all       - All assistants",
+        "",
+        "Other commands:",
+        "  uipro versions  - List available versions",
+        "  uipro update    - Update to latest version",
+        "  uipro init --version v1.0.0 - Install specific version",
+        "",
+        "Documentation: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "Update: scoop update ui-ux-pro-max-skill",
+        "Uninstall: scoop uninstall ui-ux-pro-max-skill"
+    ],
+    "checkver": {
+        "url": "https://registry.npmjs.org/uipro-cli",
+        "jsonpath": "$['dist-tags'].latest"
+    },
+    "autoupdate": {
+        "url": "https://registry.npmjs.org/uipro-cli/-/uipro-cli-$version.tgz",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
