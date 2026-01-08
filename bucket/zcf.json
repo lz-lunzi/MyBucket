@@ -1,0 +1,61 @@
+{
+    "version": "3.5.0",
+    "description": "Zero-Config Code Flow for Claude Code & Codex - One-click setup with bilingual support, intelligent agent system and personalized AI assistant",
+    "homepage": "https://github.com/UfoMiao/zcf",
+    "license": "MIT",
+    "depends": "nodejs-lts",
+    "installer": {
+        "script": "npm install -g zcf@latest"
+    },
+    "uninstaller": {
+        "script": "npm uninstall -g zcf -y"
+    },
+    "notes": [
+        "ZCF installed successfully!",
+        "",
+        "ZCF (Zero-Config Code Flow) is a one-click configuration tool for Claude Code & Codex with bilingual support (Chinese/English).",
+        "",
+        "Features:",
+        "  - Zero-config, one-click setup for Claude Code & Codex",
+        "  - Bilingual support (English | 中文 | 日本語)",
+        "  - Intelligent agent system",
+        "  - Personalized AI assistant",
+        "  - MCP (Model Context Protocol) support",
+        "  - Multiple workflows including sixStep workflow",
+        "  - CCR proxy integration",
+        "  - BMAD Method support",
+        "",
+        "Quick Start:",
+        "  zcf                      # Open interactive menu",
+        "  zcf i                    # Full initialization: install + workflows + API/CCR + MCP",
+        "  zcf u                    # Update workflows only",
+        "  zcf --lang zh-CN         # Switch interface language",
+        "  zcf --version            # Check version",
+        "  zcf --help               # Show help",
+        "",
+        "Non-interactive example (provider preset):",
+        "  zcf i -s -p 302ai -k \"sk-xxx\"",
+        "",
+        "Authentication & Configuration:",
+        "  - Supports multiple providers: 302.AI, OpenAI, Anthropic, etc.",
+        "  - Google Login (free tier available)",
+        "  - API Key configuration",
+        "  - Vertex AI support",
+        "  - CCR proxy setup",
+        "",
+        "Documentation:",
+        "  - Full docs: https://zcf.ufomiao.com/",
+        "  - GitHub: https://github.com/UfoMiao/zcf",
+        "  - Community: https://t.me/ufomiao_zcf",
+        "",
+        "Update: scoop update zcf",
+        "Uninstall: scoop uninstall zcf"
+    ],
+    "checkver": {
+        "npm": "zcf"
+    },
+    "autoupdate": {
+        "url": "https://registry.npmjs.org/zcf",
+        "jsonpath": "$.\"dist-tags\".latest"
+    }
+}
