@@ -1,0 +1,44 @@
+{
+    "version": "0.3.2",
+    "description": "Agent S: an open agentic framework that uses computers like a human. First to surpass human-level performance on OSWorld (72.60%)",
+    "homepage": "https://github.com/simular-ai/Agent-S",
+    "license": "Apache-2.0",
+    "depends": "python",
+    "url": "https://files.pythonhosted.org/packages/5a/b2/8082453e0c4689f8ed348b6c7fc246fd0844f63f82d17b784aa2a38b6947/gui_agents-0.3.2-py3-none-any.whl",
+    "hash": "bd089217dd50acb698794efc43e7df60f11091efa5e30d695bc2ef72e8cdc027",
+    "installer": {
+        "script": "pip install \"$dir\\gui_agents-$version-py3-none-any.whl\""
+    },
+    "uninstaller": {
+        "script": "pip uninstall gui-agents -y"
+    },
+    "notes": [
+        "Agent S installed successfully!",
+        "",
+        "Agent S is an AI-powered framework that enables computers to autonomously perform tasks through the Agent-Computer Interface (ACI).",
+        "",
+        "Configuration:",
+        "  Set environment variables for API keys:",
+        "    OPENAI_API_KEY - For OpenAI models",
+        "    ANTHROPIC_API_KEY - For Anthropic models",
+        "    HF_TOKEN - For Hugging Face models",
+        "",
+        "Usage:",
+        "  agent_s --provider openai --model gpt-4o --ground_provider huggingface --ground_url http://localhost:8080 --ground_model ui-tars-1.5-7b --grounding_width 1920 --grounding_height 1080",
+        "",
+        "Documentation: https://github.com/simular-ai/Agent-S",
+        "Update: scoop update agent-s",
+        "Uninstall: scoop uninstall agent-s"
+    ],
+    "checkver": {
+        "pypi": "gui-agents"
+    },
+    "autoupdate": {
+        "url": "https://pypi.org/pypi/gui-agents/json",
+        "jsonpath": "$.urls[?(@.filename=='gui_agents-$version-py3-none-any.whl')].url",
+        "hash": {
+            "url": "https://pypi.org/pypi/gui-agents/json",
+            "jsonpath": "$.urls[?(@.filename=='gui_agents-$version-py3-none-any.whl')].digests.sha256"
+        }
+    }
+}

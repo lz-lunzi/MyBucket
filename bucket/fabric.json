@@ -1,0 +1,86 @@
+{
+    "version": "1.4.374",
+    "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.",
+    "homepage": "https://github.com/danielmiessler/Fabric",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/danielmiessler/Fabric/releases/download/v1.4.374/fabric_Windows_x86_64.zip",
+            "hash": "7143d0f1b7d7b157c25737fc0e29f7bf91eabc2b73e4a739e3e7c3292880dc12"
+        },
+        "arm64": {
+            "url": "https://github.com/danielmiessler/Fabric/releases/download/v1.4.374/fabric_Windows_arm64.zip",
+            "hash": "3e3b5693d9719760c11866fc2b3e06037864810fdd0f521ed6fb08b39eed68a6"
+        },
+        "32bit": {
+            "url": "https://github.com/danielmiessler/Fabric/releases/download/v1.4.374/fabric_Windows_i386.zip",
+            "hash": "2ed3d10105e33fbd81e3d587fc564293b1f68f62061acc6c99e2814fefe6ff49"
+        }
+    },
+    "extract_dir": "fabric",
+    "bin": [
+        "fabric.exe",
+        "fabric.bat"
+    ],
+    "env_add_path": ".",
+    "notes": [
+        "Fabric installed successfully!",
+        "",
+        "Fabric is an AI-augmented open-source framework that provides a modular system for solving specific problems using AI prompts.",
+        "",
+        "Usage:",
+        "  fabric -p <pattern>  # Apply a specific pattern to your input",
+        "  fabric --pattern <pattern>  # Short alias for -p",
+        "  fabric --list  # List all available patterns",
+        "  fabric -s <pattern>  # Save a new pattern",
+        "  fabric -d <pattern>  # Delete a pattern",
+        "",
+        "Common patterns:",
+        "  extract_wisdom         # Extract main points from URL content",
+        "  extract_code_context    # Extract code from selected text",
+        "  summarize_code          # Summarize selected code",
+        "  extract_key_points      # Extract key points from content",
+        "  ask_claude             # Ask Claude a question",
+        "  write_micro_essay       # Write a micro-essay",
+        "  write_tweet             # Write a tweet",
+        "  write_email             # Write an email",
+        "  create_html_page       # Create an HTML page",
+        "  create_react_component  # Create a React component",
+        "  create_shell_command     # Create a shell command",
+        "  convert_to_bash         # Convert natural language to a bash command",
+        "  convert_to_javascript    # Convert to JavaScript",
+        "  improve_code            # Improve code (Claude recommended)",
+        "  improve_syntax          # Improve code syntax",
+        "  create_openai_call      # Create an OpenAI function call",
+        "  create_azure_openai_call # Create an Azure OpenAI function call",
+        "  translate_code          # Translate code",
+        "  convert_to_php          # Convert to PHP",
+        "  convert_to_ruby         # Convert to Ruby",
+        "  create_sql_query        # Create an SQL query",
+        "  create_pytest          # Create a pytest",
+        "",
+        "Configuration:",
+        "  Edit ~/.config/fabric/config.yaml to set your default model and API keys.",
+        "  Supported models: OpenAI, Azure OpenAI, Claude, Bedrock, Google, HuggingFace, Ollama, Local LLMs",
+        "",
+        "Documentation: https://github.com/danielmiessler/Fabric",
+        "Update: scoop update fabric",
+        "Uninstall: scoop uninstall fabric"
+    ],
+    "checkver": {
+        "github": "https://github.com/danielmiessler/Fabric"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_arm64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_i386.zip"
+            }
+        }
+    }
+}
