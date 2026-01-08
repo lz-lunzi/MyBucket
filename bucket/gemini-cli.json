@@ -1,0 +1,68 @@
+{
+    "version": "0.23.0",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+    "homepage": "https://github.com/google-gemini/gemini-cli",
+    "license": "Apache-2.0",
+    "depends": "nodejs-lts",
+    "installer": {
+        "script": "npm install -g @google/gemini-cli@latest"
+    },
+    "uninstaller": {
+        "script": "npm uninstall -g @google/gemini-cli -y"
+    },
+    "env_set": {
+        "HTTP_PROXY": "http://127.0.0.1:10809",
+        "HTTPS_PROXY": "http://127.0.0.1:10809"
+    },
+    "notes": [
+        "Gemini CLI installed successfully!",
+        "",
+        "Gemini CLI is an open-source AI agent that brings the power of Gemini directly to your terminal.",
+        "",
+        "Proxy Configuration:",
+        "  This installation has configured proxy settings automatically:",
+        "    HTTP_PROXY=http://127.0.0.1:10809",
+        "    HTTPS_PROXY=http://127.0.0.1:10809",
+        "",
+        "  To modify proxy settings, update your shell profile or run:",
+        "    $env:HTTP_PROXY='http://127.0.0.1:10809'",
+        "    $env:HTTPS_PROXY='http://127.0.0.1:10809'",
+        "",
+        "Features:",
+        "  - Free tier: 60 requests/min and 1,000 requests/day",
+        "  - Gemini 2.5 Pro with 1M token context window",
+        "  - Built-in tools: Google Search, file operations, shell commands",
+        "  - MCP (Model Context Protocol) support",
+        "  - Code understanding, generation, and debugging",
+        "",
+        "Quick Start:",
+        "  gemini                    # Start Gemini CLI",
+        "  gemini --version          # Check version",
+        "  gemini -p \"your prompt\"   # Non-interactive mode",
+        "",
+        "Authentication Options:",
+        "  1. Login with Google (Recommended)",
+        "     - Free tier available",
+        "     - No API key management needed",
+        "",
+        "  2. Gemini API Key",
+        "     export GEMINI_API_KEY='your-api-key'",
+        "",
+        "  3. Vertex AI",
+        "     export GOOGLE_API_KEY='your-api-key'",
+        "     export GOOGLE_GENAI_USE_VERTEXAI=true",
+        "",
+        "Documentation: https://geminicli.com",
+        "GitHub: https://github.com/google-gemini/gemini-cli",
+        "",
+        "Update: scoop update gemini-cli",
+        "Uninstall: scoop uninstall gemini-cli"
+    ],
+    "checkver": {
+        "github": "https://github.com/google-gemini/gemini-cli"
+    },
+    "autoupdate": {
+        "url": "https://api.github.com/repos/google-gemini/gemini-cli/releases/latest",
+        "jsonpath": "$.tag_name"
+    }
+}

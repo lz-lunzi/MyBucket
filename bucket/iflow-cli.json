@@ -1,0 +1,47 @@
+{
+    "version": "0.4.16",
+    "description": "A terminal AI assistant that can analyze code, execute programming tasks, and handle file operations.",
+    "homepage": "https://platform.iflow.cn/cli/quickstart",
+    "license": "Proprietary",
+    "depends": "nodejs-lts",
+    "installer": {
+        "script": "npm install -g @iflow-ai/iflow-cli@latest"
+    },
+    "uninstaller": {
+        "script": "npm uninstall -g @iflow-ai/iflow-cli -y"
+    },
+    "notes": [
+        "iFlow CLI installed successfully!",
+        "",
+        "iFlow CLI is a terminal AI assistant that helps with code analysis, programming tasks, and file operations.",
+        "",
+        "Features:",
+        "  - Code understanding and generation",
+        "  - Shell command execution",
+        "  - File operations",
+        "  - Web search and fetching",
+        "  - MCP (Model Context Protocol) support for custom integrations",
+        "",
+        "Quick Start:",
+        "  iflow                    # Start iFlow CLI",
+        "  iflow --version          # Check version",
+        "  iflow /help              # Show help",
+        "",
+        "Authentication:",
+        "  - Login with iFlow (recommended): Full feature support",
+        "  - API Key: Valid for 7 days",
+        "  - OpenAI Compatible API: For custom model services",
+        "",
+        "Documentation: https://platform.iflow.cn/cli/quickstart",
+        "",
+        "Update: scoop update iflow-cli",
+        "Uninstall: scoop uninstall iflow-cli"
+    ],
+    "checkver": {
+        "npm": "@iflow-ai/iflow-cli"
+    },
+    "autoupdate": {
+        "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli",
+        "jsonpath": "$.\"dist-tags\".latest"
+    }
+}
