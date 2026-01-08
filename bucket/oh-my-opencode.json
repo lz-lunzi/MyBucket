@@ -5,7 +5,7 @@
     "license": "MIT",
     "depends": "nodejs",
     "url": "https://registry.npmjs.org/oh-my-opencode/-/oh-my-opencode-2.14.0.tgz",
-    "hash": "SHA256",
+    "hash": "9292f019a4994b1c9788fd81267ac126488da332ea7d7303f2f902adfdf98205",
     "installer": {
         "script": "npm install -g oh-my-opencode"
     },
@@ -27,6 +27,8 @@
     },
     "autoupdate": {
         "url": "https://registry.npmjs.org/oh-my-opencode/-/oh-my-opencode-$version.tgz",
-        "hash": "SHA256"
+        "hash": {
+            "mode": "download"
+        }
     }
 }
