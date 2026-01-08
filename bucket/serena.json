@@ -1,0 +1,47 @@
+{
+    "version": "0.1.4",
+    "description": "A powerful coding agent toolkit providing semantic retrieval and editing capabilities (MCP server & other integrations)",
+    "homepage": "https://oraios.github.io/serena",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://github.com/oraios/serena/releases/download/v0.1.4/serena_agent-0.1.4-py3-none-any.whl",
+    "hash": "af8cccc17cf64c991eccbdbde7b64f512e6c15052524041a1547c410d450c148",
+    "installer": {
+        "script": "pip install \"$dir\\serena_agent-$version-py3-none-any.whl\""
+    },
+    "uninstaller": {
+        "script": "pip uninstall serena-agent -y"
+    },
+    "notes": [
+        "Serena installed successfully!",
+        "",
+        "Serena is a powerful coding agent toolkit that provides IDE-like semantic code retrieval and editing tools to LLMs.",
+        "",
+        "Quick Start:",
+        "  Start the MCP server:",
+        "    uvx serena start-mcp-server",
+        "",
+        "  Or use pip:",
+        "    pip install serena-agent",
+        "    serena start-mcp-server",
+        "",
+        "Integration:",
+        "  Serena can be integrated with Claude Code, Claude Desktop, VSCode, Cursor, and other MCP-enabled clients.",
+        "  See documentation at: https://oraios.github.io/serena",
+        "",
+        "Language Support:",
+        "  Supports 30+ programming languages including Python, JavaScript, TypeScript, Java, C++, Go, Rust, etc.",
+        "",
+        "Update: scoop update serena",
+        "Uninstall: scoop uninstall serena"
+    ],
+    "checkver": {
+        "github": "https://github.com/oraios/serena"
+    },
+    "autoupdate": {
+        "url": "https://github.com/oraios/serena/releases/download/v$version/serena_agent-$version-py3-none-any.whl",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}

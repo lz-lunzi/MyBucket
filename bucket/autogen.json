@@ -1,0 +1,36 @@
+{
+    "version": "0.7.5",
+    "description": "A programming framework for agentic AI. Build multi-agent applications with LLMs.",
+    "homepage": "https://microsoft.github.io/autogen",
+    "license": "MIT",
+    "depends": "python",
+    "installer": {
+        "script": "pip install -U \"autogen-agentchat>=0.7.5\""
+    },
+    "uninstaller": {
+        "script": "pip uninstall autogen-agentchat -y"
+    },
+    "notes": [
+        "AutoGen installed successfully!",
+        "",
+        "AutoGen is a programming framework for agentic AI that enables building multi-agent applications with LLMs.",
+        "",
+        "Installation includes:",
+        "  - autogen-agentchat: High-level API for building multi-agent applications",
+        "",
+        "Quick Start:",
+        "  pip install -U autogen-agentchat",
+        "",
+        "Documentation: https://microsoft.github.io/autogen",
+        "",
+        "Update: scoop update autogen",
+        "Uninstall: scoop uninstall autogen"
+    ],
+    "checkver": {
+        "pypi": "autogen-agentchat"
+    },
+    "autoupdate": {
+        "url": "https://pypi.org/pypi/autogen-agentchat/json",
+        "jsonpath": "$.urls[?(@.packagetype=='bdist_wheel')].url"
+    }
+}
