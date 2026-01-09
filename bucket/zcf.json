@@ -5,7 +5,7 @@
     "license": "MIT",
     "depends": "nodejs-lts",
     "url": "https://registry.npmjs.org/zcf/-/zcf-3.5.0.tgz",
-    "hash": "51d4bc1d3c1c3db1a8a8516985675528c890e2c9a5b7b2a8b1e5a6c5b6a8b3a6",
+    "hash": "303889649543674c30458b339ee3b07d85ebc06226eeff8550f89b450d18a91f",
     "installer": {
         "script": "npm install -g zcf@latest"
     },
