@@ -4,15 +4,13 @@
     "homepage": "https://github.com/UfoMiao/zcf",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "architecture": {
-        "64bit": {
-            "installer": {
-                "script": "npm install -g zcf@latest"
-            },
-            "uninstaller": {
-                "script": "npm uninstall -g zcf -y"
-            }
-        }
+    "url": "https://registry.npmjs.org/zcf/-/zcf-3.5.0.tgz",
+    "hash": "51d4bc1d3c1c3db1a8a8516985675528c890e2c9a5b7b2a8b1e5a6c5b6a8b3a6",
+    "installer": {
+        "script": "npm install -g zcf@latest"
+    },
+    "uninstaller": {
+        "script": "npm uninstall -g zcf -y"
     },
     "notes": [
         "ZCF installed successfully!",
@@ -56,10 +54,13 @@
         "Uninstall: scoop uninstall zcf"
     ],
     "checkver": {
-        "npm": "zcf"
+        "url": "https://registry.npmjs.org/zcf",
+        "jsonpath": "$['dist-tags'].latest"
     },
     "autoupdate": {
-        "url": "https://registry.npmjs.org/zcf",
-        "jsonpath": "$.\"dist-tags\".latest"
+        "url": "https://registry.npmjs.org/zcf/-/zcf-$version.tgz",
+        "hash": {
+            "mode": "download"
+        }
     }
 }

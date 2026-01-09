@@ -4,6 +4,8 @@
     "homepage": "https://github.com/google-gemini/gemini-cli",
     "license": "Apache-2.0",
     "depends": "nodejs-lts",
+    "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-0.23.0.tgz",
+    "hash": "38b320c4f55745d98de8ab56d35c56ee627e88193c571bbb48062d50dada31e3",
     "installer": {
         "script": "npm install -g @google/gemini-cli@latest"
     },
@@ -59,10 +61,13 @@
         "Uninstall: scoop uninstall gemini-cli"
     ],
     "checkver": {
-        "github": "https://github.com/google-gemini/gemini-cli"
+        "url": "https://registry.npmjs.org/@google/gemini-cli",
+        "jsonpath": "$['dist-tags'].latest"
     },
     "autoupdate": {
-        "url": "https://api.github.com/repos/google-gemini/gemini-cli/releases/latest",
-        "jsonpath": "$.tag_name"
+        "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-$version.tgz",
+        "hash": {
+            "mode": "download"
+        }
     }
 }

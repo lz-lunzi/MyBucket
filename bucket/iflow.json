@@ -4,6 +4,8 @@
     "homepage": "https://platform.iflow.cn/cli/quickstart",
     "license": "Proprietary",
     "depends": "nodejs-lts",
+    "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli/-/iflow-cli-0.4.16.tgz",
+    "hash": "467e31de79077a9131794692530497b879699710bed3f437c3ce582aa56d92a2",
     "installer": {
         "script": "npm install -g @iflow-ai/iflow-cli@latest"
     },
@@ -38,10 +40,13 @@
         "Uninstall: scoop uninstall iflow-cli"
     ],
     "checkver": {
-        "npm": "@iflow-ai/iflow-cli"
+        "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli",
+        "jsonpath": "$['dist-tags'].latest"
     },
     "autoupdate": {
-        "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli",
-        "jsonpath": "$.\"dist-tags\".latest"
+        "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli/-/iflow-cli-$version.tgz",
+        "hash": {
+            "mode": "download"
+        }
     }
 }
