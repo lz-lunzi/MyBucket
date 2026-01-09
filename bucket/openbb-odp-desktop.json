@@ -6,15 +6,14 @@
     "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/ODP/Open-Data-Platform_latest_windows_x86_64.exe",
     "hash": "0c314cc18847c41f6b3a3b42c8bc0f6a00e55f919e844448581e6086d78e7686",
     "installer": {
-        "script": "Start-Process \"$dir\\Open-Data-Platform_latest_windows_x86_64.exe\" -ArgumentList '/S', '/D=$dir' -Wait"
+        "script": "Start-Process \"$dir\\Open-Data-Platform_latest_windows_x86_64.exe\" -ArgumentList '/S', '/D=$env:LOCALAPPDATA\\Programs\\OpenBB' -Wait"
     },
     "uninstaller": {
-        "script": "Start-Process \"$dir\\Uninstall OpenBB ODP.exe\" -ArgumentList '/S' -Wait -ErrorAction SilentlyContinue"
+        "script": "Start-Process \"$env:LOCALAPPDATA\\Programs\\OpenBB\\Uninstall OpenBB ODP.exe\" -ArgumentList '/S' -Wait -ErrorAction SilentlyContinue"
     },
-    "bin": "OpenBB.exe",
     "shortcuts": [
         [
-            "OpenBB.exe",
+            "$env:LOCALAPPDATA\\Programs\\OpenBB\\OpenBB.exe",
             "OpenBB ODP Desktop"
         ]
     ],
