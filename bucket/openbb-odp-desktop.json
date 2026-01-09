@@ -3,20 +3,24 @@
     "description": "OpenBB 开放数据平台桌面应用 - 开源金融数据分析和投资研究平台",
     "homepage": "https://github.com/OpenBB-finance/OpenBB",
     "license": "MIT",
-    "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/ODP/Open-Data-Platform_latest_windows_x86_64.exe",
-    "hash": "0c314cc18847c41f6b3a3b42c8bc0f6a00e55f919e844448581e6086d78e7686",
+    "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/Open-Data-Platform-v1.0.0/Open-Data-Platform_1.0.0_x86_64.exe",
+    "hash": "d90a382ed9aa3dd52745e8de2c80c0a96a9a9fdf6c5ca15828b4c48b4f650fb6",
     "installer": {
-        "script": "Start-Process \"$dir\\Open-Data-Platform_latest_windows_x86_64.exe\" -ArgumentList '/S', '/D=$env:LOCALAPPDATA\\Programs\\OpenBB' -Wait"
+        "script": [
+            "Start-Process \"$dir\\Open-Data-Platform_1.0.0_x86_64.exe\" -ArgumentList '/S', '/D=$env:LOCALAPPDATA\\Programs\\OpenBB' -Wait",
+            "Write-Host 'Creating desktop shortcut...' -ForegroundColor Green",
+            "$WshShell = New-Object -ComObject WScript.Shell",
+            "$Shortcut = $WshShell.CreateShortcut([Environment]::GetFolderPath('Desktop') + '\\OpenBB ODP Desktop.lnk')",
+            "$Shortcut.TargetPath = Join-Path $env:LOCALAPPDATA 'Programs\\OpenBB\\OpenBB.exe'",
+            "$Shortcut.Save()"
+        ]
     },
     "uninstaller": {
-        "script": "Start-Process \"$env:LOCALAPPDATA\\Programs\\OpenBB\\Uninstall OpenBB ODP.exe\" -ArgumentList '/S' -Wait -ErrorAction SilentlyContinue"
-    },
-    "shortcuts": [
-        [
-            "$env:LOCALAPPDATA\\Programs\\OpenBB\\OpenBB.exe",
-            "OpenBB ODP Desktop"
+        "script": [
+            "Start-Process \"$env:LOCALAPPDATA\\Programs\\OpenBB\\Uninstall OpenBB ODP.exe\" -ArgumentList '/S' -Wait -ErrorAction SilentlyContinue",
+            "Remove-Item ([Environment]::GetFolderPath('Desktop') + '\\OpenBB ODP Desktop.lnk') -ErrorAction SilentlyContinue"
         ]
-    ],
+    },
     "notes": [
         "OpenBB ODP Desktop 安装成功！",
         "",
@@ -54,10 +58,11 @@
         "卸载：scoop uninstall openbb-odp-desktop"
     ],
     "checkver": {
-        "github": "https://github.com/OpenBB-finance/OpenBB"
+        "github": "https://github.com/OpenBB-finance/OpenBB",
+        "regex": "Open-Data-Platform-v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/ODP/Open-Data-Platform_latest_windows_x86_64.exe",
+        "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/Open-Data-Platform-v$version/Open-Data-Platform_$version_x86_64.exe",
         "hash": {
             "mode": "download"
         }
