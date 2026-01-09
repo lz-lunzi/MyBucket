@@ -4,11 +4,15 @@
     "homepage": "https://github.com/UfoMiao/zcf",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "installer": {
-        "script": "npm install -g zcf@latest"
-    },
-    "uninstaller": {
-        "script": "npm uninstall -g zcf -y"
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": "npm install -g zcf@latest"
+            },
+            "uninstaller": {
+                "script": "npm uninstall -g zcf -y"
+            }
+        }
     },
     "notes": [
         "ZCF installed successfully!",
