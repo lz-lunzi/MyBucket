@@ -1,0 +1,37 @@
+{
+    "version": "0.31.0",
+    "description": "The glamourous AI coding agent for your favourite terminal",
+    "homepage": "https://github.com/charmbracelet/crush",
+    "license": {
+        "identifier": "Other",
+        "url": "https://github.com/charmbracelet/crush/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/charmbracelet/crush/releases/download/v0.31.0/crush_0.31.0_Windows_x86_64.zip",
+            "hash": "85b9a0f64ab70c90be82d1432f5fd2a0f592660065dfbe2e314bf13edba4f47a"
+        },
+        "arm64": {
+            "url": "https://github.com/charmbracelet/crush/releases/download/v0.31.0/crush_0.31.0_Windows_arm64.zip",
+            "hash": "ceb953dc7cb57965210964b88be3d23e05e5f7347044f9261c22fe2d98e25015"
+        }
+    },
+    "bin": "crush.exe",
+    "checkver": {
+        "github": "https://github.com/charmbracelet/crush"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/charmbracelet/crush/releases/download/v$version/crush_$version_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/charmbracelet/crush/releases/download/v$version/crush_$version_Windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/charmbracelet/crush/releases/download/v$version/checksums.txt",
+            "regex": "(?m)$basename\\s+$sha256"
+        }
+    }
+}

@@ -24,5 +24,9 @@
         "**/.DS_Store": true,
         "**/tmp": true
     },
-    "Codegeex.RepoIndex": true
+    "Codegeex.RepoIndex": true,
+    "claudeCode.useTerminal": true,
+    "claudeCode.selectedModel": "nv/glm",
+    "claudeCode.disableLoginPrompt": true,
+    "claudeCode.allowDangerouslySkipPermissions": true
 }
