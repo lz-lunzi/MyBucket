@@ -22,6 +22,9 @@
     },
     "autoupdate": {
         "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-$version.tgz",
-        "hash": "SHA256"
+        "hash": {
+            "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-$version.tgz",
+            "mode": "extract"
+        }
     }
 }

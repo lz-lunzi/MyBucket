@@ -4,6 +4,8 @@
     "homepage": "https://microsoft.github.io/autogen",
     "license": "MIT",
     "depends": "python",
+    "url": "https://pypi.org/packages/source/a/autogen-agentchat/autogen-agentchat-0.7.5.tar.gz",
+    "hash": "8d9c718db52ef24a518806b3a0ef848f0e4c1902877675dc0abed73a8e6e7755",
     "installer": {
         "script": "pip install -U \"autogen-agentchat>=0.7.5\""
     },
@@ -26,11 +28,8 @@
         "更新: scoop update autogen",
         "卸载: scoop uninstall autogen"
     ],
-    "checkver": {
-        "pypi": "autogen-agentchat"
-    },
+    "checkver": "autogen-agentchat",
     "autoupdate": {
-        "url": "https://pypi.org/pypi/autogen-agentchat/json",
-        "jsonpath": "$.urls[?(@.packagetype=='bdist_wheel')].url"
+        "url": "https://pypi.org/pypi/autogen-agentchat/json"
     }
 }

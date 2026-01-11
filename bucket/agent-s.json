@@ -30,15 +30,8 @@
         "更新: scoop update agent-s",
         "卸载: scoop uninstall agent-s"
     ],
-    "checkver": {
-        "pypi": "gui-agents"
-    },
+    "checkver": "gui-agents",
     "autoupdate": {
-        "url": "https://pypi.org/pypi/gui-agents/json",
-        "jsonpath": "$.urls[?(@.filename=='gui_agents-$version-py3-none-any.whl')].url",
-        "hash": {
-            "url": "https://pypi.org/pypi/gui-agents/json",
-            "jsonpath": "$.urls[?(@.filename=='gui_agents-$version-py3-none-any.whl')].digests.sha256"
-        }
+        "url": "https://pypi.org/pypi/gui-agents/json"
     }
 }

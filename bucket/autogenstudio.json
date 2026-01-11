@@ -33,15 +33,8 @@
         "Update: scoop update autogenstudio",
         "Uninstall: scoop uninstall autogenstudio"
     ],
-    "checkver": {
-        "pypi": "autogenstudio"
-    },
+    "checkver": "autogenstudio",
     "autoupdate": {
-        "url": "https://pypi.org/pypi/autogenstudio/json",
-        "jsonpath": "$.urls[?(@.filename=='autogenstudio-$version-py3-none-any.whl')].url",
-        "hash": {
-            "url": "https://pypi.org/pypi/autogenstudio/json",
-            "jsonpath": "$.urls[?(@.filename=='autogenstudio-$version-py3-none-any.whl')].digests.sha256"
-        }
+        "url": "https://pypi.org/pypi/autogenstudio/json"
     }
 }

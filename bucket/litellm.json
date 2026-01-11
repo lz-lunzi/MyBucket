@@ -4,6 +4,8 @@
     "homepage": "https://docs.litellm.ai",
     "license": "MIT",
     "depends": "python",
+    "url": "https://pypi.org/packages/source/l/litellm/litellm-1.80.13.tar.gz",
+    "hash": "61ed22dfad633ada3b97dd8a50d8e8d804da0115105006d2f9d77ba3fb247a0b",
     "installer": {
         "script": "pip install \"litellm[proxy]\""
     },
@@ -69,10 +71,8 @@
         "更新: scoop update litellm",
         "卸载: scoop uninstall litellm"
     ],
-    "checkver": {
-        "pypi": "litellm"
-    },
+    "checkver": "litellm",
     "autoupdate": {
-        "script": "pip install \"litellm[proxy]\""
+        "url": "https://pypi.org/packages/source/l/litellm/litellm-$version.tar.gz"
     }
 }
