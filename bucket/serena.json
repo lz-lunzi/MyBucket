@@ -1,6 +1,6 @@
 {
     "version": "0.1.4",
-    "description": "A powerful coding agent toolkit providing semantic retrieval and editing capabilities (MCP server & other integrations)",
+    "description": "一个强大的编程智能体工具包，提供语义检索和编辑功能（MCP 服务器和其他集成）",
     "homepage": "https://oraios.github.io/serena",
     "license": "MIT",
     "depends": "python",

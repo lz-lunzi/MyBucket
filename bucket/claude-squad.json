@@ -1,6 +1,6 @@
 {
     "version": "1.0.14",
-    "description": "Terminal app for managing multiple AI agents (Claude Code, Codex, Aider) in isolated workspaces",
+    "description": "终端应用程序，用于在隔离的工作空间中管理多个 AI 智能体（Claude Code、Codex、Aider）",
     "homepage": "https://github.com/smtg-ai/claude-squad",
     "license": "MIT",
     "architecture": {

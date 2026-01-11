@@ -1,6 +1,6 @@
 {
     "version": "1.5.0",
-    "description": "CLI to install UI/UX Pro Max skill for AI coding assistants. Provides design intelligence for building professional UI/UX across multiple platforms and frameworks",
+    "description": "用于为 AI 编程助手安装 UI/UX Pro Max 技能的 CLI。提供设计智能，用于跨多个平台和框架构建专业的 UI/UX",
     "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "license": "MIT",
     "depends": [
@@ -17,10 +17,10 @@
     },
     "bin": "uipro",
     "notes": [
-        "UI/UX Pro Max skill installed successfully!",
-        "Usage: uipro init --ai <assistant>",
+        "UI/UX Pro Max 技能安装成功！",
+        "使用：uipro init --ai <assistant>",
         "",
-        "Available assistants:",
+        "可用的助手：",
         "  claude    - Claude Code",
         "  cursor    - Cursor",
         "  windsurf  - Windsurf",
@@ -28,16 +28,16 @@
         "  copilot   - GitHub Copilot",
         "  kiro      - Kiro",
         "  codex     - Codex (Skills)",
-        "  all       - All assistants",
+        "  all       - 所有助手",
         "",
-        "Other commands:",
-        "  uipro versions  - List available versions",
-        "  uipro update    - Update to latest version",
-        "  uipro init --version v1.0.0 - Install specific version",
+        "其他命令：",
+        "  uipro versions  - 列出可用版本",
+        "  uipro update    - 更新到最新版本",
+        "  uipro init --version v1.0.0 - 安装特定版本",
         "",
-        "Documentation: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
-        "Update: scoop update ui-ux-pro-max-skill",
-        "Uninstall: scoop uninstall ui-ux-pro-max-skill"
+        "文档: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "更新: scoop update ui-ux-pro-max-skill",
+        "卸载: scoop uninstall ui-ux-pro-max-skill"
     ],
     "checkver": {
         "url": "https://registry.npmjs.org/uipro-cli",

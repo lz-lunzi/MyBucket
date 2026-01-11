@@ -1,6 +1,6 @@
 {
     "version": "2.14.0",
-    "description": "OpenCode plugin - custom agents (oracle, librarian) and enhanced features. The Best Agent Harness with Sisyphus for autonomous coding",
+    "description": "OpenCode 插件 - 自定义智能体（oracle、librarian）和增强功能。与 Sisyphus 结合的最好的智能体工具用于自主编程",
     "homepage": "https://github.com/code-yeongyu/oh-my-opencode",
     "license": "MIT",
     "depends": "nodejs",
@@ -14,12 +14,12 @@
     },
     "bin": "oh-my-opencode",
     "notes": [
-        "oh-my-opencode installed successfully!",
-        "Run 'oh-my-opencode install' to start the interactive installer.",
-        "Configure your Claude, ChatGPT, and Gemini subscriptions after installation.",
-        "Documentation: https://github.com/code-yeongyu/oh-my-opencode",
-        "Update: scoop update oh-my-opencode",
-        "Uninstall: scoop uninstall oh-my-opencode"
+        "oh-my-opencode 安装成功！",
+        "运行 'oh-my-opencode install' 启动交互式安装程序。",
+        "安装后配置您的 Claude、ChatGPT 和 Gemini 订阅。",
+        "文档: https://github.com/code-yeongyu/oh-my-opencode",
+        "更新: scoop update oh-my-opencode",
+        "卸载: scoop uninstall oh-my-opencode"
     ],
     "checkver": {
         "url": "https://registry.npmjs.org/oh-my-opencode",

@@ -1,6 +1,6 @@
 {
     "version": "2025.2.16.0",
-    "description": "A remote connection management software for individual, MSPs, and IT professionals.",
+    "description": "面向个人、MSP 和 IT 专业人员的远程连接管理软件。",
     "homepage": "https://devolutions.net/remote-desktop-manager/",
     "license": "Proprietary",
     "architecture": {

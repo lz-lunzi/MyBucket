@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "description": "Minimal harness demonstrating long-running autonomous coding with the Claude Agent SDK",
+    "description": "使用 Claude Agent SDK 演示长期自主编程的最小化工具",
     "homepage": "https://github.com/leonvanzyl/autonomous-coding",
     "license": "MIT",
     "url": "https://github.com/leonvanzyl/autonomous-coding/archive/refs/heads/main.zip",
@@ -131,10 +131,10 @@
         ]
     },
     "notes": [
-        "Autonomous Coding - Claude Agent SDK Demo installed!",
-        "Requires: Node.js, Claude Code CLI, and API credentials",
-        "Read SETUP-INSTRUCTIONS.txt for detailed setup steps",
-        "Run: .\\start.bat to start"
+        "自主编程 - Claude Agent SDK 演示已安装！",
+        "需要：Node.js、Claude Code CLI 和 API 凭证",
+        "阅读 SETUP-INSTRUCTIONS.txt 获取详细设置步骤",
+        "运行：.\\start.bat 开始"
     ],
     "checkver": {
         "url": "https://api.github.com/repos/leonvanzyl/autonomous-coding/commits/main",

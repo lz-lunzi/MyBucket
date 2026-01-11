@@ -1,6 +1,6 @@
 {
     "version": "0.31.0",
-    "description": "The glamourous AI coding agent for your favourite terminal",
+    "description": "为您喜爱的终端提供华丽的 AI 编程智能体",
     "homepage": "https://github.com/charmbracelet/crush",
     "license": {
         "identifier": "Other",

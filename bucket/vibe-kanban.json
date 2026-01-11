@@ -1,6 +1,6 @@
 {
     "version": "0.0.144",
-    "description": "Orchestrate AI coding agents in parallel without conflicts, and perform code review through diff tool",
+    "description": "无冲突地并行编排 AI 编程智能体，并通过 diff 工具进行代码审查",
     "homepage": "https://www.vibekanban.com/",
     "license": {
         "identifier": "MIT",

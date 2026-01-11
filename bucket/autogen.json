@@ -1,6 +1,6 @@
 {
     "version": "0.7.5",
-    "description": "A programming framework for agentic AI. Build multi-agent applications with LLMs.",
+    "description": "智能体 AI 的编程框架。使用 LLM 构建多智能体应用。",
     "homepage": "https://microsoft.github.io/autogen",
     "license": "MIT",
     "depends": "python",
@@ -11,20 +11,20 @@
         "script": "pip uninstall autogen-agentchat -y"
     },
     "notes": [
-        "AutoGen installed successfully!",
+        "AutoGen 安装成功！",
         "",
-        "AutoGen is a programming framework for agentic AI that enables building multi-agent applications with LLMs.",
+        "AutoGen 是智能体 AI 的编程框架，支持使用 LLM 构建多智能体应用。",
         "",
-        "Installation includes:",
-        "  - autogen-agentchat: High-level API for building multi-agent applications",
+        "安装包括：",
+        "  - autogen-agentchat: 用于构建多智能体应用的高级 API",
         "",
-        "Quick Start:",
+        "快速开始：",
         "  pip install -U autogen-agentchat",
         "",
-        "Documentation: https://microsoft.github.io/autogen",
+        "文档: https://microsoft.github.io/autogen",
         "",
-        "Update: scoop update autogen",
-        "Uninstall: scoop uninstall autogen"
+        "更新: scoop update autogen",
+        "卸载: scoop uninstall autogen"
     ],
     "checkver": {
         "pypi": "autogen-agentchat"

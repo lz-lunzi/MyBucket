@@ -1,6 +1,6 @@
 {
     "version": "0.4.2.2",
-    "description": "AutoGen Studio: A no-code GUI for building multi-agent applications",
+    "description": "AutoGen Studio：用于构建多智能体应用的无代码 GUI",
     "homepage": "https://microsoft.github.io/autogen/docs/autogen-studio/getting-started",
     "license": "MIT",
     "depends": "python",

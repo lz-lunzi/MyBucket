@@ -1,6 +1,6 @@
 {
     "version": "0.6.0",
-    "description": "An open-source AI agent that lives in your terminal",
+    "description": "一个在您的终端中运行的开源 AI 智能体",
     "homepage": "https://github.com/QwenLM/qwen-code",
     "license": "Apache-2.0",
     "depends": "nodejs",
@@ -32,10 +32,10 @@
     },
     "bin": "qwen",
     "notes": [
-        "This package installs qwen-code globally via npm.",
-        "Use 'qwen' command directly after installation.",
-        "Update: scoop update qwen-code",
-        "Uninstall: scoop uninstall qwen-code"
+        "此软件包通过 npm 全局安装 qwen-code。",
+        "安装后直接使用 'qwen' 命令。",
+        "更新: scoop update qwen-code",
+        "卸载: scoop uninstall qwen-code"
     ],
     "checkver": {
         "url": "https://registry.npmjs.org/@qwen-code/qwen-code",

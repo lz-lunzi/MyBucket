@@ -1,6 +1,6 @@
 {
     "version": "2.7.2",
-    "description": "Autonomous multi-session AI coding framework with desktop UI",
+    "description": "自主多会话 AI 编程框架，带桌面 UI",
     "homepage": "https://github.com/AndyMik90/Auto-Claude",
     "license": "AGPL-3.0",
     "architecture": {

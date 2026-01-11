@@ -1,7 +1,7 @@
 {
     "version": "17.6.3-24583834",
     "homepage": "https://www.vmware.com/products/desktop-hypervisor.html",
-    "description": "An application for creating and running virtual machines on your computer.",
+    "description": "用于在计算机上创建和运行虚拟机的应用程序。",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.broadcom.com/company/legal/terms-of-use"

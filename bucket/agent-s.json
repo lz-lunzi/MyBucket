@@ -1,6 +1,6 @@
 {
     "version": "0.3.2",
-    "description": "Agent S: an open agentic framework that uses computers like a human. First to surpass human-level performance on OSWorld (72.60%)",
+    "description": "Agent S: 一个开源的智能体框架，像人类一样使用计算机。首次在 OSWorld 上超越人类性能 (72.60%)",
     "homepage": "https://github.com/simular-ai/Agent-S",
     "license": "Apache-2.0",
     "depends": "python",
@@ -13,22 +13,22 @@
         "script": "pip uninstall gui-agents -y"
     },
     "notes": [
-        "Agent S installed successfully!",
+        "Agent S 安装成功！",
         "",
-        "Agent S is an AI-powered framework that enables computers to autonomously perform tasks through the Agent-Computer Interface (ACI).",
+        "Agent S 是一个 AI 驱动的框架，使计算机能够通过代理计算机接口 (ACI) 自主执行任务。",
         "",
-        "Configuration:",
-        "  Set environment variables for API keys:",
-        "    OPENAI_API_KEY - For OpenAI models",
-        "    ANTHROPIC_API_KEY - For Anthropic models",
-        "    HF_TOKEN - For Hugging Face models",
+        "配置：",
+        "  为 API 密钥设置环境变量：",
+        "    OPENAI_API_KEY - 用于 OpenAI 模型",
+        "    ANTHROPIC_API_KEY - 用于 Anthropic 模型",
+        "    HF_TOKEN - 用于 Hugging Face 模型",
         "",
-        "Usage:",
+        "使用：",
         "  agent_s --provider openai --model gpt-4o --ground_provider huggingface --ground_url http://localhost:8080 --ground_model ui-tars-1.5-7b --grounding_width 1920 --grounding_height 1080",
         "",
-        "Documentation: https://github.com/simular-ai/Agent-S",
-        "Update: scoop update agent-s",
-        "Uninstall: scoop uninstall agent-s"
+        "文档: https://github.com/simular-ai/Agent-S",
+        "更新: scoop update agent-s",
+        "卸载: scoop uninstall agent-s"
     ],
     "checkver": {
         "pypi": "gui-agents"
