@@ -1,12 +1,12 @@
 {
-    "version": "2.7.2",
+    "version": "2.7.4",
     "description": "自主多会话 AI 编程框架，带桌面 UI",
     "homepage": "https://github.com/AndyMik90/Auto-Claude",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.2/Auto-Claude-2.7.2-win32-x64.exe#/dl.7z",
-            "hash": "452ff4c8f73a9a32c8dbe02abed11eeb2d8d7afe388ed9fe8d96e008e2fbeb12",
+            "url": "https://github.com/AndyMik90/Auto-Claude/releases/download/v2.7.4/Auto-Claude-2.7.4-win32-x64.exe#/dl.7z",
+            "hash": "69361a15d59e34de79b1eb77f1f472b9667800e96c9708a595156a83ae1b5b72",
             "installer": {
                 "script": [
                     "Write-Host 'Installing Auto-Claude to Scoop directory...' -ForegroundColor Green",
