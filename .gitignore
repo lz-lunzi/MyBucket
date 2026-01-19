@@ -6,3 +6,4 @@ checkver-*.html
 .spec-workflow/
 .qoder
 tmp/
+nul
