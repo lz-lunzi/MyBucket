@@ -5,7 +5,6 @@
     "license": "MIT",
     "depends": "nodejs-lts",
     "url": "https://registry.npmjs.org/clawdbot/-/clawdbot-2026.1.23-1.tgz",
-    "hash": "",
     "installer": {
         "script": "npm install --global --prefix $dir $dir\\clawdbot-$version.tgz"
     },
