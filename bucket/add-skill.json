@@ -1,10 +1,10 @@
 {
-    "version": "1.0.29",
+    "version": "2.0.0",
     "description": "为 AI 编码代理安装技能包（OpenCode, Claude Code, Codex, Cursor 等）",
     "homepage": "https://github.com/vercel-labs/add-skill",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/add-skill/-/add-skill-1.0.29.tgz",
+    "url": "https://registry.npmjs.org/add-skill/-/add-skill-2.0.0.tgz",
     "hash": "",
     "installer": {
         "script": "npm install --production --prefix $dir $dir\\add-skill-$version.tgz"
