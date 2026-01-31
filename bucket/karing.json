@@ -1,10 +1,10 @@
 {
-    "version": "1.2.11.1406",
+    "version": "1.2.13.1600",
     "description": "简单而强大的代理工具，支持 clash/sing-box 的路由规则",
     "homepage": "https://github.com/KaringX/karing",
     "license": "Unknown",
-    "url": "https://github.com/KaringX/karing/releases/download/v1.2.11.1406/karing_1.2.11.1406_windows_x64.zip",
-    "hash": "cff49cc2dc36d0d6b0bf80b17cc8ba8c4e540866d6d221b02fb19899b79fec8f",
+    "url": "https://github.com/KaringX/karing/releases/download/v1.2.13.1600/karing_1.2.13.1600_windows_x64.zip",
+    "hash": "5a039787abfedc988aaeb8a0a2cbbbb746f69364170492e4f3991c1c58402a32",
     "shortcuts": [
         [
             "karing.exe",
