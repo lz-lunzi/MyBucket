@@ -1,10 +1,10 @@
 {
-    "version": "2026.1.23-1",
+    "version": "2026.1.24-3",
     "description": "个人 AI 助手 - 任何操作系统，任何平台",
     "homepage": "https://github.com/clawdbot/clawdbot",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/clawdbot/-/clawdbot-2026.1.23-1.tgz",
+    "url": "https://registry.npmjs.org/clawdbot/-/clawdbot-2026.1.24-3.tgz",
     "installer": {
         "script": "npm install --global --prefix $dir $dir\\clawdbot-$version.tgz"
     },
