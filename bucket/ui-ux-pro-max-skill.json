@@ -1,5 +1,5 @@
 {
-    "version": "2.1.3",
+    "version": "2.2.3",
     "description": "用于为 AI 编程助手安装 UI/UX Pro Max 技能的 CLI。提供设计智能，用于跨多个平台和框架构建专业的 UI/UX",
     "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "license": "MIT",
@@ -7,8 +7,8 @@
         "nodejs",
         "python"
     ],
-    "url": "https://registry.npmjs.org/uipro-cli/-/uipro-cli-2.1.3.tgz",
-    "hash": "85dfb51928917ff599fbb6504666163b597c166400e63cbab1638a2da2955692",
+    "url": "https://registry.npmjs.org/uipro-cli/-/uipro-cli-2.2.3.tgz",
+    "hash": "4e69eec78aeafb96e02fb253a0c5524d69667e2c542fe37957ed010ebb66c5d5",
     "installer": {
         "script": "npm install -g uipro-cli"
     },

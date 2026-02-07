@@ -1,11 +1,11 @@
 {
-    "version": "0.5.2",
+    "version": "0.5.8",
     "description": "一个终端 AI 助手，可以分析代码、执行编程任务和处理文件操作。",
     "homepage": "https://platform.iflow.cn/cli/quickstart",
     "license": "Proprietary",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli/-/iflow-cli-0.5.2.tgz",
-    "hash": "4cefeb4c39f4eafece465e5c3f06a4d1001b5440be1f31761aa229b205b98db8",
+    "url": "https://registry.npmjs.org/@iflow-ai/iflow-cli/-/iflow-cli-0.5.8.tgz",
+    "hash": "4587dba7414a620d71ad22023c4721bd9660e9d5f312934f8d721ebd872c63cf",
     "installer": {
         "script": "npm install -g @iflow-ai/iflow-cli@latest"
     },
