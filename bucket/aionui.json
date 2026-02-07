@@ -3,26 +3,10 @@
     "description": "免费、本地、开源的 AI 协作平台，支持 Gemini CLI、Claude Code、Codex、Qwen Code 等",
     "homepage": "https://github.com/iOfficeAI/AionUi",
     "license": "Apache-2.0",
-    "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.8.3/AionUi-1.8.3-win-x64.exe",
-    "hash": "2d77d44db508f438d05f7f357807d1eaa1f51bcb2ef3f22353961bc8c84001cd",
-    "installer": {
-        "script": [
-            "$args = @('/SILENT', '/DIR', \"$dir\")",
-            "Start-Process -FilePath \"$fname\" -ArgumentList $args -Wait",
-            "if ($LASTEXITCODE -ne 0) {",
-            "    Write-Error 'Installation failed'",
-            "    exit 1",
-            "}"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "$uninstaller = Join-Path $dir 'unins000.exe'",
-            "if (Test-Path $uninstaller) {",
-            "    Start-Process -FilePath $uninstaller -ArgumentList '/SILENT' -Wait",
-            "}"
-        ]
-    },
+    "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.8.3/AionUi-1.8.3-win-x64.zip",
+    "hash": "bcebcd306882013f9eb6d1ee5bede465f0920946f6b91b6fabf1138c2b213a1f",
+    "extract_dir": "",
+    "bin": "AionUi.exe",
     "shortcuts": [
         [
             "AionUi.exe",
@@ -75,7 +59,7 @@
         "github": "https://github.com/iOfficeAI/AionUi"
     },
     "autoupdate": {
-        "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-x64.exe",
+        "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-x64.zip",
         "hash": {
             "mode": "download"
         }
