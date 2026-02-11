@@ -1,12 +1,12 @@
 {
-    "version": "0.1.26",
+    "version": "0.1.27",
     "description": "Windows 版 Qoder CLI 工具",
     "homepage": "https://qoder.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://download.qoder.com/qodercli/releases/0.1.26/qodercli_0.1.26_windows_amd64.zip",
-            "hash": "cc27c03ac381aa4cc9421d7b5b07392dab50a8c1feb9a25533b3a336d992fad2"
+            "url": "https://download.qoder.com/qodercli/releases/0.1.27/qodercli_0.1.27_windows_amd64.zip",
+            "hash": "c0b1a63e6fc1ce4b42c9afcdc171d35ddce0825cd3a9934f84959733fe15f7ef"
         }
     },
     "bin": "qodercli.exe",
