@@ -1,10 +1,10 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "OpenBB 开放数据平台桌面应用 - 开源金融数据分析和投资研究平台",
     "homepage": "https://github.com/OpenBB-finance/OpenBB",
     "license": "MIT",
-    "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/Open-Data-Platform-v1.0.0/Open-Data-Platform_1.0.0_x86_64.exe",
-    "hash": "0c314cc18847c41f6b3a3b42c8bc0f6a00e55f919e844448581e6086d78e7686",
+    "url": "https://github.com/OpenBB-finance/OpenBB/releases/download/Open-Data-Platform-v1.0.1/Open-Data-Platform_1.0.1_x86_64.exe",
+    "hash": "b71fa1fff9a621d4e37de6dcf59af09bcb4b733718283b3f1c699b539c059fd8",
     "installer": {
         "script": [
             "Start-Process \"$dir\\Open-Data-Platform_1.0.0_x86_64.exe\" -ArgumentList '/S', '/D=$env:LOCALAPPDATA\\Programs\\OpenBB' -Wait",
