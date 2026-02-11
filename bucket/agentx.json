@@ -1,10 +1,10 @@
 {
-    "version": "0.2.9",
+    "version": "0.3.1",
     "description": "GPU 加速的跨平台桌面 AI 代理工作台，支持多种 AI 代理的多会话管理、内置代码编辑器和终端集成",
     "homepage": "https://github.com/sxhxliang/agent-studio",
     "license": "Apache-2.0",
-    "url": "https://github.com/sxhxliang/agent-studio/releases/download/v0.2.9/agentx-windows.exe",
-    "hash": "dcf18aba8f366def4d766eb81569bdd0bad63f53a7663b530c4aaec45df3a940",
+    "url": "https://github.com/sxhxliang/agent-studio/releases/download/v0.3.1/agentx-windows.exe",
+    "hash": "a405107f67a5486244cf17847f711905ec2f12d1c1e14e8bb98f6e2377ac0b4b",
     "bin": "agentx-windows.exe",
     "shortcuts": [
         [
@@ -12,9 +12,7 @@
             "AgentX"
         ]
     ],
-    "persist": [
-        "config.json"
-    ],
+    "persist": "config.json",
     "notes": [
         "AgentX 安装成功！",
         "",
