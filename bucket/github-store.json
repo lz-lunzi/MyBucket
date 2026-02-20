@@ -15,10 +15,10 @@
     "uninstaller": {
         "script": "$msi = Get-ChildItem \"$dir\\GitHub.Store.*.msi\" | Select-Object -First 1; Start-Process -Wait msiexec \"/x `\"$($msi.FullName)`\" /qn /norestart\""
     },
-    "bin": "GitHub Store.exe",
+    "bin": "GitHub-Store\\GitHub-Store.exe",
     "shortcuts": [
         [
-            "GitHub Store.exe",
+            "GitHub-Store\\GitHub-Store.exe",
             "GitHub Store"
         ]
     ],
