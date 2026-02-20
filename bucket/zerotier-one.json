@@ -1,0 +1,30 @@
+{
+    "version": "1.14.2",
+    "description": "ZeroTier - Create and manage secure virtual networks",
+    "homepage": "https://www.zerotier.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.zerotier.com/eula"
+    },
+    "url": "https://download.zerotier.com/dist/ZeroTier%20One.msi",
+    "hash": "60e609d272df41b37517308d92ac8d95917875aff68662dd0001792fb8b7bc7d",
+    "bin": "zerotier-cli.exe",
+    "checkver": {
+        "url": "https://github.com/zerotier/ZeroTierOne/releases",
+        "regex": "tag/([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.zerotier.com/dist/ZeroTier%20One.msi"
+    },
+    "notes": [
+        "ZeroTier One installed successfully!",
+        "",
+        "Common commands:",
+        "  zerotier-cli info              # Show status",
+        "  zerotier-cli join <network>    # Join a network",
+        "  zerotier-cli leave <network>   # Leave a network",
+        "  zerotier-cli listnetworks      # List networks",
+        "",
+        "Homepage: https://www.zerotier.com"
+    ]
+}
