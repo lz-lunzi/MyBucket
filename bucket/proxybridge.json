@@ -1,0 +1,24 @@
+{
+    "version": "3.2.0",
+    "description": "ProxyBridge - 跨平台代理桥接工具",
+    "homepage": "https://github.com/InterceptSuite/ProxyBridge",
+    "license": "MIT",
+    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Setup-3.2.0.exe",
+    "hash": "d2147b1431b4af2788e28bd07df41862f0fa1bd0d4919c180ede172d9cabe17f",
+    "installer": {
+        "args": "/S"
+    },
+    "shortcuts": [
+        [
+            "ProxyBridge.exe",
+            "ProxyBridge"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/InterceptSuite/ProxyBridge"
+    },
+    "autoupdate": {
+        "github": "https://github.com/InterceptSuite/ProxyBridge",
+        "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v$version/ProxyBridge-Setup-$version.exe"
+    }
+}
