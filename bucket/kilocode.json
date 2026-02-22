@@ -1,0 +1,53 @@
+{
+    "version": "1.0.25",
+    "description": "Kilo Code CLI - 终端 AI 编程助手",
+    "homepage": "https://github.com/Kilo-Org/kilo",
+    "license": "MIT",
+    "depends": "nodejs",
+    "url": "https://registry.npmjs.org/@kilocode/cli/-/cli-1.0.25.tgz",
+    "hash": "be7er29bf06d15aa4a1b0ca39debe15d10e12a45a",
+    "installer": {
+        "script": [
+            "Write-Host 'Installing @kilocode/cli globally via npm...' -ForegroundColor Green",
+            "npm install -g @kilocode/cli",
+            "if ($LASTEXITCODE -eq 0) {",
+            "  Write-Host '@kilocode/cli installed successfully!' -ForegroundColor Green",
+            "  Write-Host 'Testing kilo command...' -ForegroundColor Yellow",
+            "  kilo --version",
+            "  if ($LASTEXITCODE -ne 0) {",
+            "    Write-Warning 'kilo command test failed, but installation succeeded'",
+            "  }",
+            "} else {",
+            "  Write-Error 'Failed to install @kilocode/cli via npm'",
+            "  exit 1",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Write-Host 'Uninstalling @kilocode/cli globally...' -ForegroundColor Yellow",
+            "npm uninstall -g @kilocode/cli",
+            "Write-Host '@kilocode/cli uninstalled successfully!' -ForegroundColor Green"
+        ]
+    },
+    "bin": [
+        "kilo",
+        "kilocode"
+    ],
+    "notes": [
+        "此软件包通过 npm 全局安装 @kilocode/cli。",
+        "安装后直接使用 'kilo' 或 'kilocode' 命令。",
+        "更新: scoop update kilocode",
+        "卸载: scoop uninstall kilocode"
+    ],
+    "checkver": {
+        "url": "https://registry.npmjs.org/@kilocode/cli",
+        "jsonpath": "$['dist-tags'].latest"
+    },
+    "autoupdate": {
+        "url": "https://registry.npmjs.org/@kilocode/cli/-/cli-$version.tgz",
+        "hash": {
+            "mode": "download"
+        }
+    }
+}
