@@ -4,24 +4,15 @@
     "homepage": "https://www.360.cn/drvmgr/",
     "license": "Freeware",
     "url": "https://sfdl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe",
-    "hash": "",
+    "hash": "3af3ef808eaa4d1b38f8f51abd0b8a6c6fcd00a6c9d1ff17cd74766b43681a4a",
     "installer": {
-        "args": "/S"
+        "args": "/S /D=\"$dir\""
     },
+    "bin": "DrvMgr.exe",
     "shortcuts": [
         [
-            "360DrvMgr.exe",
+            "DrvMgr.exe",
             "360驱动大师"
         ]
-    ],
-    "checkver": {
-        "url": "https://www.360.cn/drvmgr/",
-        "regex": "360DrvMgrInstaller[_-]([\\d.]+)\\.exe"
-    },
-    "autoupdate": {
-        "url": "https://sfdl.360safe.com/drvmgr/guanwang__360DrvMgrInstaller_beta.exe",
-        "hash": {
-            "mode": "download"
-        }
-    }
+    ]
 }
