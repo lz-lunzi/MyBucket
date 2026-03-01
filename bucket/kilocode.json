@@ -1,11 +1,11 @@
 {
-    "version": "7.0.30",
+    "version": "7.0.33",
     "description": "Kilo Code CLI - 终端 AI 编程助手",
     "homepage": "https://github.com/Kilo-Org/kilo",
     "license": "MIT",
     "depends": "nodejs",
-    "url": "https://registry.npmjs.org/@kilocode/cli/-/cli-7.0.30.tgz",
-    "hash": "d2080e4e42ab82de98a7dcf6275326d01c4fcb15b96691ca1bd5461be3947c03",
+    "url": "https://registry.npmjs.org/@kilocode/cli/-/cli-7.0.33.tgz",
+    "hash": "5ec2ab3ca79e6a0b6d7c7f4e03187d1665c749eb60d33519ae318306acff1e3e",
     "installer": {
         "script": [
             "Write-Host 'Installing @kilocode/cli globally via npm...' -ForegroundColor Green",
