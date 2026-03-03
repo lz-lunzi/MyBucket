@@ -18,7 +18,6 @@
         "github": "https://github.com/InterceptSuite/ProxyBridge"
     },
     "autoupdate": {
-        "github": "https://github.com/InterceptSuite/ProxyBridge",
         "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v$version/ProxyBridge-Setup-$version.exe"
     }
 }
