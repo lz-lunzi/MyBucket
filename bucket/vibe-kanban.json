@@ -1,5 +1,5 @@
 {
-    "version": "0.1.25",
+    "version": "0.1.28",
     "description": "无冲突地并行编排 AI 编程智能体，并通过 diff 工具进行代码审查",
     "homepage": "https://www.vibekanban.com/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://github.com/BloopAI/vibe-kanban/blob/main/LICENSE"
     },
     "depends": "nodejs",
-    "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-0.1.25.tgz",
-    "hash": "f9b9a2ef37df7eb5e535d87c587fa0213d24962c6b0ba3761033e3eecf555b9b",
+    "url": "https://registry.npmjs.org/vibe-kanban/-/vibe-kanban-0.1.28.tgz",
+    "hash": "3bab838e5a90bdaca91139f20fd66b682a463a83baff560f192dd75ca94ae70e",
     "installer": {
         "script": "npm install -g vibe-kanban"
     },
