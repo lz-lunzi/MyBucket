@@ -6,13 +6,16 @@
         "identifier": "Proprietary",
         "url": "https://qclaw.qq.com/"
     },
-    "innosetup": true,
     "architecture": {
         "64bit": {
-            "url": "https://cdn.m.qq.com/qclaw/win/5001/QClaw-Setup-latest.exe",
+            "url": "https://cdn.m.qq.com/qclaw/win/5001/QClaw-Setup-latest.exe#/dl.7z",
             "hash": "b6c2d22b1d7f0f2caf3a37490515669754713588eda96a1db3de7f5dd9fadf45"
         }
     },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\QClaw-Setup-latest.exe\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ],
     "bin": "QClaw.exe",
     "shortcuts": [
         [
