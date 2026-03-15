@@ -4,7 +4,7 @@
     "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "license": "MIT",
     "depends": [
-        "nodejs",
+        "nodejs-lts",
         "python"
     ],
     "url": "https://registry.npmjs.org/uipro-cli/-/uipro-cli-2.2.3.tgz",
