@@ -7,20 +7,18 @@
         "url": "https://trae.cn"
     },
     "architecture": {
+        
         "64bit": {
             "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.1_windows_amd64.zip",
-            "hash": "sha256:PLACEHOLDER_AMD64"
+            "hash": "767f83ad43da772493f66a6c341b9cdf901ec7cd9b8a2de4cfdc2fa77e0b806d"
         },
         "arm64": {
             "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.1_windows_arm64.zip",
-            "hash": "sha256:PLACEHOLDER_ARM64"
+            "hash": "767f83ad43da772493f66a6c341b9cdf901ec7cd9b8a2de4cfdc2fa77e0b806d"
         }
     },
     "bin": [
-        "trae-cli.exe",
-        "traecli.exe",
-        "trae-agent.exe",
-        "ta.exe"
+        "traecli.exe"
     ],
     "shortcuts": [
         [
@@ -42,7 +40,7 @@
             }
         },
         "hash": {
-            "url": "$url.sha256"
+            "mode": "download"
         }
     },
     "notes": [

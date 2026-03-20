@@ -1,0 +1,22 @@
+{
+    "version": "0.1.31",
+    "description": "Qoder CLI - AI-powered coding assistant",
+    "homepage": "https://qoder.com",
+    "license": "MIT",
+    "depends": "nodejs-lts",
+    "post_install": [
+        "npm install -g @qoder-ai/qodercli@$version"
+    ],
+    "pre_uninstall": [
+        "npm uninstall -g @qoder-ai/qodercli"
+    ],
+    "checkver": {
+        "url": "https://registry.npmjs.org/@qoder-ai/qodercli/latest",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "post_install": [
+            "npm install -g @qoder-ai/qodercli@$version"
+        ]
+    }
+}
