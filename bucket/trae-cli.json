@@ -1,0 +1,60 @@
+{
+    "version": "0.120.1",
+    "description": "Trae CLI - 字节跳动推出的 AI 编程命令行工具",
+    "homepage": "https://trae.cn",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://trae.cn"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.1_windows_amd64.zip",
+            "hash": "sha256:PLACEHOLDER_AMD64"
+        },
+        "arm64": {
+            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.1_windows_arm64.zip",
+            "hash": "sha256:PLACEHOLDER_ARM64"
+        }
+    },
+    "bin": [
+        "trae-cli.exe",
+        "traecli.exe",
+        "trae-agent.exe",
+        "ta.exe"
+    ],
+    "shortcuts": [
+        [
+            "trae-cli.exe",
+            "Trae CLI"
+        ]
+    ],
+    "checkver": {
+        "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_latest_version.txt",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    },
+    "notes": [
+        "Trae CLI 安装成功！",
+        "",
+        "可用命令：",
+        "  trae-cli   / traecli   - AI 编程助手",
+        "  trae-agent             - Agent 模式",
+        "  ta                     - 简写别名",
+        "",
+        "官网：https://trae.cn",
+        "更新：scoop update trae-cli",
+        "卸载：scoop uninstall trae-cli"
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "version": "0.9.6",
+    "description": "ClawPanel - 跨平台 AI 助手桌面客户端，基于 Tauri + React + TypeScript 构建",
+    "homepage": "https://github.com/qingchencloud/clawpanel",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/qingchencloud/clawpanel/releases/download/v0.9.6/ClawPanel_0.9.6_x64-setup.exe",
+            "hash": "sha256:84d5282d3f716eae36513c7e5ca5b99d4e383dff219f11604b59b45d3f0edbff"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\ClawPanel_$version_x64-setup.exe\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ],
+    "bin": "ClawPanel.exe",
+    "shortcuts": [
+        [
+            "ClawPanel.exe",
+            "ClawPanel"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/qingchencloud/clawpanel/releases/download/v$version/ClawPanel_$version_x64-setup.exe"
+            }
+        }
+    },
+    "notes": [
+        "ClawPanel 安装成功！",
+        "",
+        "功能特性：",
+        "  - 跨平台支持 Windows、macOS、Linux",
+        "  - 内置 OpenClaw CLI 自动检测与安装",
+        "  - 支持 14+ AI 提供商",
+        "  - 消息渠道支持 Telegram、Discord、飞书、微信等",
+        "",
+        "系统要求：Node.js 18+（推荐 22 LTS）",
+        "",
+        "GitHub：https://github.com/qingchencloud/clawpanel",
+        "更新：scoop update clawpanel",
+        "卸载：scoop uninstall clawpanel"
+    ]
+}
