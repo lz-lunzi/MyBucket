@@ -4,19 +4,21 @@
     "homepage": "https://qoder.com",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "post_install": [
-        "npm install -g @qoder-ai/qodercli@$version"
-    ],
-    "pre_uninstall": [
-        "npm uninstall -g @qoder-ai/qodercli"
-    ],
+    "url": "https://registry.npmjs.org/@qoder-ai/qodercli/-/qodercli-0.1.31.tgz",
+    "installer": {
+        "script": "npm install --global --prefix $dir $dir\\qodercli-$version.tgz"
+    },
+    "uninstaller": {
+        "script": "npm uninstall --global --prefix $dir @qoder-ai/qodercli"
+    },
     "checkver": {
         "url": "https://registry.npmjs.org/@qoder-ai/qodercli/latest",
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "post_install": [
-            "npm install -g @qoder-ai/qodercli@$version"
-        ]
+        "url": "https://registry.npmjs.org/@qoder-ai/qodercli/-/qodercli-$version.tgz",
+        "hash": {
+            "mode": "download"
+        }
     }
 }
