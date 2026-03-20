@@ -3,20 +3,23 @@
     "description": "Qoder CLI - AI-powered coding assistant",
     "homepage": "https://qoder.com",
     "license": "MIT",
-    "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/@qoder-ai/qodercli/-/qodercli-0.1.31.tgz",
-    "installer": {
-        "script": "npm install --global --prefix $dir $dir\\qodercli-$version.tgz"
+    "architecture": {
+        "64bit": {
+            "url": "https://download.qoder.com/qodercli/releases/0.1.31/qodercli_0.1.31_windows_amd64.zip",
+            "hash": "1c4e36dbf035dd2b00a3beb2b6a9dfad1e2e0e68741c83415624b881fe2590b8"
+        }
     },
-    "uninstaller": {
-        "script": "npm uninstall --global --prefix $dir @qoder-ai/qodercli"
-    },
+    "bin": "qodercli.exe",
     "checkver": {
-        "url": "https://registry.npmjs.org/@qoder-ai/qodercli/latest",
-        "jsonpath": "$.version"
+        "url": "https://download.qoder.com/qodercli/releases/latest/version.txt",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://registry.npmjs.org/@qoder-ai/qodercli/-/qodercli-$version.tgz",
+        "architecture": {
+            "64bit": {
+                "url": "https://download.qoder.com/qodercli/releases/$version/qodercli_$version_windows_amd64.zip"
+            }
+        },
         "hash": {
             "mode": "download"
         }

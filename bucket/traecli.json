@@ -18,7 +18,7 @@
         }
     },
     "bin": [
-        "traecli.exe"
+        "trae-cli.exe"
     ],
     "shortcuts": [
         [
