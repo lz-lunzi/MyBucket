@@ -1,11 +1,11 @@
 {
-    "version": "0.1.4",
+    "version": "1.0.0",
     "description": "一个强大的编程智能体工具包，提供语义检索和编辑功能（MCP 服务器和其他集成）",
     "homepage": "https://oraios.github.io/serena",
     "license": "MIT",
     "depends": "python",
-    "url": "https://github.com/oraios/serena/releases/download/v0.1.4/serena_agent-0.1.4-py3-none-any.whl",
-    "hash": "af8cccc17cf64c991eccbdbde7b64f512e6c15052524041a1547c410d450c148",
+    "url": "https://github.com/oraios/serena/releases/download/v1.0.0/serena_agent-1.0.0-py3-none-any.whl",
+    "hash": "01de7d8e7c3fa0866a711493c1047f8d1273ee01f7d4a21a2d90b714164cd6d0",
     "installer": {
         "script": "pip install \"$dir\\serena_agent-$version-py3-none-any.whl\""
     },
