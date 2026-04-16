@@ -1,11 +1,11 @@
 {
-    "version": "3.17.1",
+    "version": "3.17.4",
     "description": "OpenCode 插件 - 自定义智能体（oracle、librarian）和增强功能。与 Sisyphus 结合的最好的智能体工具用于自主编程",
     "homepage": "https://github.com/code-yeongyu/oh-my-opencode",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/oh-my-opencode/-/oh-my-opencode-3.17.1.tgz",
-    "hash": "9df391384936b94f42370a839100a445411249159f459d53e530c76cca315c57",
+    "url": "https://registry.npmjs.org/oh-my-opencode/-/oh-my-opencode-3.17.4.tgz",
+    "hash": "f2e76c6e03e3efe26b0cd1b5ac480bd5d1c7171c0ed2a772362867032033a62b",
     "installer": {
         "script": "npm install -g oh-my-opencode"
     },
