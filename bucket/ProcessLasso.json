@@ -1,5 +1,5 @@
 {
-    "version": "18.0.1.24",
+    "version": "0.",
     "description": "Windows process priority, CPU affinity, and process automation utility.",
     "homepage": "https://bitsum.com/processlasso/",
     "license": "Proprietary",
@@ -9,13 +9,9 @@
             "hash": "d9216e1491aa130a3595a688da9a5ffaca67a3bb7609cb069e86e000baba041b"
         }
     },
-    "pre_install": [
-        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }"
-    ],
+    "pre_install": "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
     "installer": {
-        "script": [
-            "Start-Process -Wait \"$dir\\processlassosetup64.exe\" -ArgumentList '/S', \"/D=$dir\""
-        ]
+        "script": "Start-Process -Wait \"$dir\\processlassosetup64.exe\" -ArgumentList '/S', \"/D=$dir\""
     },
     "uninstaller": {
         "script": [
@@ -26,11 +22,12 @@
             "Start-Process -Wait \"$dir\\uninstall.exe\" -ArgumentList '/S'"
         ]
     },
-    "bin": [
-        "ProcessLasso.exe"
-    ],
+    "bin": "ProcessLasso.exe",
     "shortcuts": [
-        ["ProcessLasso.exe", "Process Lasso"]
+        [
+            "ProcessLasso.exe",
+            "Process Lasso"
+        ]
     ],
     "checkver": {
         "url": "https://bitsum.com/processlasso/",
