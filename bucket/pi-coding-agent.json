@@ -1,11 +1,11 @@
 {
-    "version": "0.66.1",
+    "version": "0.67.4",
     "description": "AI 编码智能体 CLI，提供 read、bash、edit、write 工具和会话管理",
     "homepage": "https://github.com/badlogic/pi-mono",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.66.1.tgz",
-    "hash": "34ddba0371107ede41872bb9dc998d10277592090d3cfb1ee81b039f019bcf21",
+    "url": "https://registry.npmjs.org/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.67.4.tgz",
+    "hash": "5db55b5d6fb4a41d891df785de88b9efc405632dadacd6e160b87243afeabad5",
     "installer": {
         "script": "npm install -g @mariozechner/pi-coding-agent"
     },
