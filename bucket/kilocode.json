@@ -1,11 +1,11 @@
 {
-    "version": "7.2.14",
+    "version": "7.2.24",
     "description": "Kilo Code CLI - 终端 AI 编程助手",
     "homepage": "https://github.com/Kilo-Org/kilo",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/@kilocode/cli/-/cli-7.2.14.tgz",
-    "hash": "9138787081fcfed7146e3545de036ccd9a382d920f565712380c42e25e389164",
+    "url": "https://registry.npmjs.org/@kilocode/cli/-/cli-7.2.24.tgz",
+    "hash": "7f30c33aae79b8af19b164276c83832fb5beaf998475948b80bbc7bc8b5bb446",
     "installer": {
         "script": "npm install --global --prefix $dir $dir\\cli-$version.tgz"
     },
