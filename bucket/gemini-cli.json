@@ -1,11 +1,11 @@
 {
-    "version": "0.39.1",
+    "version": "0.40.1",
     "description": "一个开源的 AI 智能体，将 Gemini 的强大功能直接引入您的终端。",
     "homepage": "https://github.com/google-gemini/gemini-cli",
     "license": "Apache-2.0",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-0.39.1.tgz",
-    "hash": "f6afd726bd2e4510e8407c9dda3c34a3fa63d5f4baea7cff10375269ef974216",
+    "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-0.40.1.tgz",
+    "hash": "893205127c072d3baa2fba419a28081b9fd5cb77c745883139dd9e3e2c1a2b2d",
     "installer": {
         "script": "npm install -g @google/gemini-cli@latest"
     },
