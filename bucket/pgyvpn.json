@@ -4,7 +4,7 @@
     "homepage": "https://pgy.oray.com/download/",
     "license": "Freeware",
     "url": "https://pgy.oray.com/download/windows#/dl.7z",
-    "hash": "",
+    "hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
     "installer": {
         "script": [
             "Write-Host '==========================================================' -ForegroundColor Cyan",
