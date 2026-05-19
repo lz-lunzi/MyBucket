@@ -7,94 +7,29 @@
         "uv",
         "git"
     ],
-    "url": "https://github.com/NousResearch/hermes-agent/archive/refs/tags/v0.14.0.zip",
-    "hash": "",
-    "extract_dir": "hermes-agent-0.14.0",
+    "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1",
+    "hash": "e11d0d0cf4fa89041867f362aa10a83b4a9525033f0636d8622c26d22d119064",
     "installer": {
         "script": [
-            "# Create virtual environment with Python 3.11",
-            "Write-Host 'Creating virtual environment...' -ForegroundColor Green",
-            "& uv venv \"$dir\\venv\" --python 3.11",
-            "if ($LASTEXITCODE -ne 0) {",
-            "    Write-Host 'Failed to create venv. Ensure Python 3.11+ is available.' -ForegroundColor Red",
-            "    Write-Host 'Try: uv python install 3.11' -ForegroundColor Yellow",
-            "    exit 1",
-            "}",
+            "# Run upstream install.ps1 with Scoop-compatible paths",
+            "# -HermesHome: data dir in persist (survives updates)",
+            "# -InstallDir: source code in $dir\\hermes-agent",
+            "& ([scriptblock]::Create((Get-Content \"$dir\\install.ps1\" -Raw))) -HermesHome \"$persist_dir\\data\" -InstallDir \"$dir\\hermes-agent\" -SkipSetup",
             "",
-            "# Install dependencies using uv sync (hash-verified via uv.lock)",
-            "Write-Host 'Installing dependencies (hash-verified)...' -ForegroundColor Green",
-            "$env:UV_PROJECT_ENVIRONMENT = \"$dir\\venv\"",
-            "Push-Location $dir",
-            "if (Test-Path 'uv.lock') {",
-            "    & uv sync --extra all --locked",
-            "    if ($LASTEXITCODE -ne 0) {",
-            "        Write-Host 'uv.lock sync failed, falling back to pip install...' -ForegroundColor Yellow",
-            "        & uv pip install -e '.[all]'",
-            "        if ($LASTEXITCODE -ne 0) {",
-            "            & uv pip install -e '.'",
-            "        }",
-            "    }",
-            "} else {",
-            "    & uv pip install -e '.[all]'",
-            "    if ($LASTEXITCODE -ne 0) {",
-            "        & uv pip install -e '.'",
-            "    }",
-            "}",
-            "Pop-Location",
-            "",
-            "# Initialize HERMES_HOME data directory (persist across updates)",
-            "$hermesHome = \"$persist_dir\\data\"",
-            "if (-not (Test-Path $hermesHome)) {",
-            "    New-Item -ItemType Directory -Force -Path $hermesHome | Out-Null",
-            "    foreach ($sub in @('cron','sessions','logs','pairing','hooks','image_cache','audio_cache','memories','skills')) {",
-            "        New-Item -ItemType Directory -Force -Path \"$hermesHome\\$sub\" | Out-Null",
-            "    }",
-            "}",
-            "",
-            "# Create .env if missing",
-            "if (-not (Test-Path \"$hermesHome\\.env\")) {",
-            "    if (Test-Path \"$dir\\.env.example\") {",
-            "        Copy-Item \"$dir\\.env.example\" \"$hermesHome\\.env\"",
-            "    } else {",
-            "        New-Item -ItemType File -Force -Path \"$hermesHome\\.env\" | Out-Null",
-            "    }",
-            "}",
-            "",
-            "# Create config.yaml if missing",
-            "if (-not (Test-Path \"$hermesHome\\config.yaml\")) {",
-            "    if (Test-Path \"$dir\\cli-config.yaml.example\") {",
-            "        Copy-Item \"$dir\\cli-config.yaml.example\" \"$hermesHome\\config.yaml\"",
-            "    }",
-            "}",
-            "",
-            "# Create SOUL.md if missing (BOM-free UTF-8)",
-            "if (-not (Test-Path \"$hermesHome\\SOUL.md\")) {",
-            "    $soulContent = \"# Hermes Agent Persona`n`n<!-- Edit this to customize how Hermes communicates with you. -->`n\"",
-            "    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)",
-            "    [System.IO.File]::WriteAllText(\"$hermesHome\\SOUL.md\", $soulContent, $utf8NoBom)",
-            "}",
-            "",
-            "# Sync bundled skills to persist dir",
-            "$pythonExe = \"$dir\\venv\\Scripts\\python.exe\"",
-            "if ((Test-Path $pythonExe) -and (Test-Path \"$dir\\tools\\skills_sync.py\")) {",
-            "    $env:HERMES_HOME = $hermesHome",
-            "    & $pythonExe \"$dir\\tools\\skills_sync.py\" 2>$null",
-            "}",
-            "",
-            "Write-Host 'Hermes Agent installed successfully!' -ForegroundColor Green"
+            "# Upstream script adds hermes to User PATH, but Scoop manages PATH via shim.",
+            "# The env_set below ensures HERMES_HOME points to persist dir (not version dir)."
         ]
     },
     "uninstaller": {
         "script": [
-            "Write-Host 'Removing Hermes Agent venv...' -ForegroundColor Yellow",
-            "if (Test-Path \"$dir\\venv\") { Remove-Item -Recurse -Force \"$dir\\venv\" -ErrorAction SilentlyContinue }",
+            "if (Test-Path \"$dir\\hermes-agent\\venv\") { Remove-Item -Recurse -Force \"$dir\\hermes-agent\\venv\" -ErrorAction SilentlyContinue }",
             "# User data in persist dir is preserved by Scoop"
         ]
     },
     "env_set": {
         "HERMES_HOME": "$persist_dir\\data"
     },
-    "bin": "venv\\Scripts\\hermes.exe",
+    "bin": "hermes-agent\\venv\\Scripts\\hermes.exe",
     "persist": "data",
     "notes": [
         "Hermes Agent 已安装!",
@@ -127,14 +62,11 @@
         "  iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)"
     ],
     "checkver": {
-        "github": "https://github.com/NousResearch/hermes-agent",
+        "url": "https://api.github.com/repos/NousResearch/hermes-agent/releases/latest",
+        "jsonpath": "$.name",
         "regex": "v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/NousResearch/hermes-agent/archive/refs/tags/v$version.zip",
-        "extract_dir": "hermes-agent-$version",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1"
     }
 }
