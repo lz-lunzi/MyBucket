@@ -1,0 +1,40 @@
+{
+    "version": "0.14.0",
+    "description": "Hermes Agent - Self-improving AI agent with tool use, multi-platform messaging and MCP",
+    "homepage": "https://hermes-agent.nousresearch.com/",
+    "license": "MIT",
+    "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1",
+    "installer": {
+        "script": "& ([scriptblock]::Create((Get-Content \"$dir\\install.ps1\" -Raw))) -HermesHome \"$dir\" -InstallDir \"$dir\\hermes-agent\" -SkipSetup"
+    },
+    "bin": "bin\\hermes.cmd",
+    "uninstaller": {
+        "script": "hermes uninstall"
+    },
+    "notes": [
+        "Hermes Agent installed successfully!",
+        "",
+        "Hermes Agent is an open-source AI agent that learns your projects,",
+        "builds its own skills, and reaches across platforms via messaging.",
+        "",
+        "Quick Start:",
+        "  hermes setup          # Run the first-time setup wizard",
+        "  hermes chat           # Start an interactive chat session",
+        "  hermes --tui          # Launch the terminal UI",
+        "  hermes gateway        # Start the messaging gateway",
+        "",
+        "Documentation: https://hermes-agent.nousresearch.com/docs/",
+        "Windows Guide: https://hermes-agent.nousresearch.com/docs/user-guide/windows-native",
+        "",
+        "Update: scoop update hermes-agent",
+        "Uninstall: scoop uninstall hermes-agent"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/NousResearch/hermes-agent/releases/latest",
+        "jsonpath": "$.name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1"
+    }
+}
