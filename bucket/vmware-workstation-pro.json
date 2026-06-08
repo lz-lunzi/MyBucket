@@ -43,5 +43,9 @@
             "vmware.exe",
             "VMware Workstation Pro"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://techdocs.broadcom.com/us/en/vmware-cis/desktop-hypervisors/workstation-pro/26H1/release-notes/vmware-workstation-pro-26h1-release-notes.html",
+        "regex": "Workstation Pro ([\\dH]+)[^|]*\\|[^|]*\\| Build (\\d+)"
+    }
 }
