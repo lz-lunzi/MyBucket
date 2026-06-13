@@ -1,0 +1,49 @@
+{
+    "version": "15.11.8",
+    "description": "Oh My Pi (OMP) — 终端 AI 编程代理，支持 hash-anchored edits、LSP、Python、浏览器工具、子代理",
+    "homepage": "https://omp.sh",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/can1357/oh-my-pi/releases/download/v15.11.8/omp-windows-x64.exe",
+            "hash": "58e5dba3b1e0664741a9f04889b816bab91ee8387470dddbcf2591ea5bec9c9b"
+        }
+    },
+    "bin": "omp.exe",
+    "notes": [
+        "OMP 已安装!",
+        "",
+        "快速开始:",
+        "  omp                # 开始对话",
+        "  omp init           # 初始化配置",
+        "  omp session        # 会话管理",
+        "",
+        "Bash Shell 配置:",
+        "  OMP 需要 bash shell (Git Bash / WSL / Cygwin / MSYS2)",
+        "  首次启动时会自动检测并配置，或手动编辑:",
+        "    ~/.omp/agent/settings.json  →  { \"shellPath\": \"C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe\" }",
+        "",
+        "可选依赖 (通过 scoop 安装):",
+        "  scoop install bun          # Source 模式安装所需",
+        "  scoop install git-lfs      # 拉取 LFS 资源",
+        "",
+        "更新: scoop update omp",
+        "卸载: scoop uninstall omp",
+        "",
+        "官网: https://omp.sh",
+        "官方安装脚本 (非 Scoop):",
+        "  iex (irm https://omp.sh/install.ps1)"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/can1357/oh-my-pi/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/can1357/oh-my-pi/releases/download/v$version/omp-windows-x64.exe"
+            }
+        }
+    }
+}
