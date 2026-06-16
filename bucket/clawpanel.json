@@ -1,12 +1,12 @@
 {
-    "version": "0.18.3",
+    "version": "0.18.5",
     "description": "ClawPanel - 跨平台 AI 助手桌面客户端，基于 Tauri + React + TypeScript 构建",
     "homepage": "https://github.com/qingchencloud/clawpanel",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/qingchencloud/clawpanel/releases/download/v0.18.3/ClawPanel_0.18.3_x64-setup.exe",
-            "hash": "dab775c1d7a40112152df7049477262733d5203e6df267eeffdcd1194cd552de"
+            "url": "https://github.com/qingchencloud/clawpanel/releases/download/v0.18.5/ClawPanel_0.18.5_x64-setup.exe",
+            "hash": "830ce24c6aeba25e10ba835d9e4b9fa802c966a06488a6518991613cf80b2bb7"
         }
     },
     "pre_install": [
