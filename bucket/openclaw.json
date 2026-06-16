@@ -1,18 +1,16 @@
 {
-    "version": "2026.6.1",
+    "version": "2026.6.8",
     "description": "OpenClaw Companion — 跨平台个人 AI 助手桌面客户端，集成多模型、多平台消息、技能系统与插件扩展",
     "homepage": "https://github.com/openclaw/openclaw",
     "license": "MIT",
-    "url": "https://github.com/openclaw/openclaw/releases/download/v2026.6.1/OpenClawCompanion-Setup-x64.exe",
+    "url": "https://github.com/openclaw/openclaw/releases/download/v2026.6.8/OpenClawCompanion-Setup-x64.exe",
     "hash": "595a78a223f771adbaead34d56b190f5be5f97222d7707f8013ff4cc81d26983",
     "installer": {
-        "script": [
-            "Start-Process \"$dir\\OpenClawCompanion-Setup-x64.exe\" -ArgumentList '/S' -Wait"
-        ]
+        "script": "Start-Process \"$dir\\OpenClawCompanion-Setup-x64.exe\" -ArgumentList '/S' -Wait"
     },
     "uninstaller": {
         "script": [
-            "$app = Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*\' 2>$null | Where-Object { $_.DisplayName -like '*OpenClaw*' }",
+            "$app = Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' 2>$null | Where-Object { $_.DisplayName -like '*OpenClaw*' }",
             "if ($app) {",
             "    Start-Process -Wait \"$($app.UninstallString)\" -ArgumentList '/S'",
             "}"
