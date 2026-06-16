@@ -1,11 +1,11 @@
 {
-    "version": "0.17.1",
+    "version": "0.18.1",
     "description": "一个在您的终端中运行的开源 AI 智能体",
     "homepage": "https://github.com/QwenLM/qwen-code",
     "license": "Apache-2.0",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.17.1.tgz",
-    "hash": "890d3d1971760226e7e9d3c22925a984e74d0edd319533bc6d3c8959ee50cf35",
+    "url": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.18.1.tgz",
+    "hash": "e9688d330896ae60fcc70b516fc8af0ea557bf062d298a72664f6e46c8161ac8",
     "installer": {
         "script": [
             "Write-Host 'Installing qwen-code globally via npm...' -ForegroundColor Green",
