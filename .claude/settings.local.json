@@ -3,7 +3,8 @@
     "allow": [
       "Bash(curl:*)",
       "WebFetch(domain:api.github.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(7z l:*)"
     ],
     "deny": [],
     "ask": []
