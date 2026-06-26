@@ -1,5 +1,4 @@
 {
-    "$schema": "./schema.json",
     "version": "16.1.22",
     "description": "Oh My Pi (OMP) — 终端 AI 编程代理，支持 hash-anchored edits、LSP、Python、浏览器工具、子代理",
     "homepage": "https://omp.sh",
@@ -10,7 +9,54 @@
             "hash": "b94dbc4bf6eada91c379f7d62fef625a9992cefad232a5e59b7abf907957b6f1"
         }
     },
-    "bin": "omp.exe",
+    "bin": [
+        [
+            "omp-windows-x64.exe",
+            "omp"
+        ]
+    ],
+    "post_install": [
+        "# Configure bash shell for OMP",
+        "$bashPath = $null",
+        "if (Test-Path 'C:\\Program Files\\Git\\bin\\bash.exe') {",
+        "    $bashPath = 'C:\\Program Files\\Git\\bin\\bash.exe'",
+        "} else {",
+        "    try { $bashPath = (Get-Command bash.exe -ErrorAction Stop).Source } catch {}",
+        "}",
+        "if ($bashPath) {",
+        "    $settingsDir = Join-Path $env:USERPROFILE '.omp\\agent'",
+        "    $settingsFile = Join-Path $settingsDir 'settings.json'",
+        "    if (-not (Test-Path $settingsDir)) { New-Item -ItemType Directory -Force -Path $settingsDir | Out-Null }",
+        "    $settings = @{}",
+        "    if (Test-Path $settingsFile) {",
+        "        try { $settings = Get-Content $settingsFile -Raw | ConvertFrom-Json -AsHashtable } catch { $settings = @{} }",
+        "    }",
+        "    if (-not $settings.shellPath) {",
+        "        $settings['shellPath'] = $bashPath",
+        "        $settings | ConvertTo-Json -Depth 10 | Set-Content $settingsFile -Encoding UTF8",
+        "        Write-Host \"OMP: Configured shell -> $bashPath\" -ForegroundColor Green",
+        "    }",
+        "} else {",
+        "    Write-Host 'OMP: No bash shell found. Install Git for Windows or set shellPath in ~/.omp/agent/settings.json' -ForegroundColor Yellow",
+        "}",
+        "",
+        "# Persist user config",
+        "$persistConfig = Join-Path $persist_dir 'config'",
+        "$userConfig = Join-Path $env:USERPROFILE '.omp'",
+        "if (-not (Test-Path $persistConfig)) { New-Item -ItemType Directory -Force -Path $persistConfig | Out-Null }",
+        "if ((Test-Path $userConfig) -and -not (Get-Item $userConfig -ErrorAction SilentlyContinue).LinkType) {",
+        "    Copy-Item \"$userConfig\\*\" $persistConfig -Force -Recurse -ErrorAction SilentlyContinue",
+        "    Remove-Item $userConfig -Recurse -Force -ErrorAction SilentlyContinue",
+        "}",
+        "New-Item -ItemType SymbolicLink -Path $userConfig -Target $persistConfig -Force -ErrorAction SilentlyContinue | Out-Null"
+    ],
+    "pre_uninstall": [
+        "$userConfig = Join-Path $env:USERPROFILE '.omp'",
+        "if ((Test-Path $userConfig) -and (Get-Item $userConfig -ErrorAction SilentlyContinue).LinkType) {",
+        "    Remove-Item $userConfig -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
+    "persist": "config",
     "notes": [
         "OMP 已安装!",
         "",
