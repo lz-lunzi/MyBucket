@@ -1,0 +1,30 @@
+{
+    "version": "0.1.101",
+    "description": "Paseo - AI desktop application",
+    "homepage": "https://github.com/getpaseo/paseo",
+    "license": {
+        "identifier": "Proprietary"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.1.101/Paseo-Setup-0.1.101-x64.exe",
+            "hash": "sha256:599c331ee9f4b68f22b72f37985dcdffbb5cac10a750785e8e122f012c62706c"
+        }
+    },
+    "shortcuts": [
+        [
+            "Paseo.exe",
+            "Paseo"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/getpaseo/paseo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.exe"
+            }
+        }
+    }
+}
