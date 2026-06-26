@@ -1,11 +1,11 @@
 {
-    "version": "3.6.7",
+    "version": "3.6.8",
     "description": "Claude Code & Codex 的零配置代码流 - 一键设置，支持双语、智能智能体系统和个性化 AI 助手",
     "homepage": "https://github.com/UfoMiao/zcf",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/zcf/-/zcf-3.6.7.tgz",
-    "hash": "f448b0d5d4e99b221b10a6bcb4f2bbb4c62aa76dd5021274059e1439ebef04c5",
+    "url": "https://registry.npmjs.org/zcf/-/zcf-3.6.8.tgz",
+    "hash": "819dda7d2177e168f79ab140d0e092bfe3bf6564473f03facb24446e9eab14dc",
     "installer": {
         "script": "npm install -g zcf@latest"
     },
