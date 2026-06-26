@@ -1,5 +1,5 @@
 {
-    "version": "0.120.40",
+    "version": "0.120.42",
     "description": "Trae CLI - 字节跳动推出的 AI 编程命令行工具",
     "homepage": "https://trae.cn",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.40_windows_amd64.zip",
-            "hash": "9ebecce18896040adcb56106e5771ef52571b4d7e34afa07ae1bab139d6b47b6"
+            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.42_windows_amd64.zip",
+            "hash": "96cd9f8329e188f2c7e456382b23a9fb92bd46e76ca03b5a8557460d87c22bb2"
         },
         "arm64": {
-            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.40_windows_arm64.zip",
-            "hash": "7a2bb36b8064d84dbe8a15053a5720bede90aa994998587ce1c53d48471349f5"
+            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae-cli/trae-cli_0.120.42_windows_arm64.zip",
+            "hash": "d2b4576450f639fa7d24fec23c45dd84f9aa817e6875c2ff4a162ed863613333"
         }
     },
     "bin": "trae-cli.exe",
