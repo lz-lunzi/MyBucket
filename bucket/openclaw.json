@@ -1,10 +1,10 @@
 {
-    "version": "2026.6.10",
+    "version": "2026.6.11",
     "description": "OpenClaw Companion — 跨平台个人 AI 助手桌面客户端，集成多模型、多平台消息、技能系统与插件扩展",
     "homepage": "https://github.com/openclaw/openclaw",
     "license": "MIT",
-    "url": "https://github.com/openclaw/openclaw/releases/download/v2026.6.10/OpenClawCompanion-Setup-x64.exe",
-    "hash": "595a78a223f771adbaead34d56b190f5be5f97222d7707f8013ff4cc81d26983",
+    "url": "https://github.com/openclaw/openclaw/releases/download/v2026.6.11/OpenClawCompanion-Setup-x64.exe",
+    "hash": "21374ca8976c63e5732e3beebd96ee07c15e91b20ff96ab6e05fcdc95ebed5ba",
     "installer": {
         "script": "Start-Process \"$dir\\OpenClawCompanion-Setup-x64.exe\" -ArgumentList '/S' -Wait"
     },
