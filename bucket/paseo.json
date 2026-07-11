@@ -1,5 +1,5 @@
 {
-    "version": "0.1.103",
+    "version": "0.1.105",
     "description": "Paseo - AI desktop application",
     "homepage": "https://github.com/getpaseo/paseo",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/getpaseo/paseo/releases/download/v0.1.103/Paseo-Setup-0.1.103-x64.exe",
-            "hash": "96cd47162e7180dc276f7da101a94bfe7fd35bd5ee2e22f344e62fdbd19665ef",
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.1.105/Paseo-Setup-0.1.105-x64.exe",
+            "hash": "172f4d618c109359ce012930fc961a75c3a4be1da821fbb5eb9f12b267a3cf36",
             "installer": {
                 "script": [
                     "7z x -o\"$dir\\_tmp\" \"$dir\\$fname\" | Out-Null",
