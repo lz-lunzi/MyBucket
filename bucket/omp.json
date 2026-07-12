@@ -18,11 +18,19 @@
     "post_install": [
         "# Configure bash shell for OMP",
         "$bashPath = $null",
-        "if (Test-Path 'C:\\Program Files\\Git\\bin\\bash.exe') {",
-        "    $bashPath = 'C:\\Program Files\\Git\\bin\\bash.exe'",
-        "} else {",
-        "    try { $bashPath = (Get-Command bash.exe -ErrorAction Stop).Source } catch {}",
+        "$candidates = @(",
+        "    'C:\\Program Files\\Git\\bin\\bash.exe',",
+        "    'C:\\msys64\\usr\\bin\\bash.exe',",
+        "    'C:\\cygwin64\\bin\\bash.exe',",
+        "    'C:\\cygwin\\bin\\bash.exe'",
+        ")",
+        "foreach ($c in $candidates) { if (Test-Path $c) { $bashPath = $c; break } }",
+        "if (-not $bashPath) {",
+        "    try { $bashPath = (Get-Command bash.exe -ErrorAction Stop).Source } catch {",
+        "        try { $bashPath = (Get-Command bash -ErrorAction Stop).Source } catch {}",
+        "    }",
         "}",
+        "if (-not $bashPath) { try { $bashPath = (Get-Command wsl.exe -ErrorAction Stop).Source } catch {} }",
         "if ($bashPath) {",
         "    $settingsDir = Join-Path $env:USERPROFILE '.omp\\agent'",
         "    $settingsFile = Join-Path $settingsDir 'settings.json'",
@@ -48,7 +56,7 @@
         "    Copy-Item \"$userConfig\\*\" $persistConfig -Force -Recurse -ErrorAction SilentlyContinue",
         "    Remove-Item $userConfig -Recurse -Force -ErrorAction SilentlyContinue",
         "}",
-        "New-Item -ItemType SymbolicLink -Path $userConfig -Target $persistConfig -Force -ErrorAction SilentlyContinue | Out-Null"
+        "New-Item -ItemType Junction -Path $userConfig -Target $persistConfig -Force -ErrorAction SilentlyContinue | Out-Null"
     ],
     "pre_uninstall": [
         "$userConfig = Join-Path $env:USERPROFILE '.omp'",
