@@ -1,8 +1,8 @@
 on:
   workflow_dispatch:
   schedule:
-    # run every 5 days at 00:00 China time (16:00 UTC previous day)
-    - cron: '0 16 */5 * *'
+    # run daily at 00:00 China time (16:00 UTC previous day)
+    - cron: '0 16 * * *'
   push:
     branches:
       - 'main'
