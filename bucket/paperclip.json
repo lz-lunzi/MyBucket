@@ -1,11 +1,11 @@
 {
-    "version": "2026.707.0",
+    "version": "2026.720.0",
     "description": "面向零人类公司的开源 AI 智能体编排平台",
     "homepage": "https://paperclip.ing",
     "license": "MIT",
     "depends": "nodejs-lts",
-    "url": "https://registry.npmjs.org/paperclipai/-/paperclipai-2026.707.0.tgz",
-    "hash": "766ff3ef79e7b8d6d2999b05f16bb23a9324fab33a143cff2e47ca2940377101",
+    "url": "https://registry.npmjs.org/paperclipai/-/paperclipai-2026.720.0.tgz",
+    "hash": "cbcd91cfc6ea0c1c97840ddb13043157aa5ee3e5adc4a5e79f7e2b0b0201e181",
     "installer": {
         "script": "npm install -g paperclipai"
     },
