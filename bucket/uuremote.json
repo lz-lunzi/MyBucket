@@ -3,10 +3,15 @@
     "description": "网易UU远程 - 免费远程控制软件，支持多设备远控电脑，4K 144帧流畅体验",
     "homepage": "https://uuyc.163.com/",
     "license": "Freeware",
-    "url": "https://api.nrd.nie.163.com/api/v1/release/dl/1?channel=gwqd#/dl.7z",
+    "url": "https://api.nrd.nie.163.com/api/v1/release/dl/1?channel=gwqd",
     "hash": "sha256:237eb74939a62935ae3e2b1fd43c484d634ccd96fb1094ba764c8cb64065dc9a",
     "pre_install": "if (!(is_admin)) { error \"$app requires admin rights to install\"; break }",
-    "bin": "UURemote.exe",
+    "installer": {
+        "script": [
+            "Start-Process \"$dir\\$fname\" -ArgumentList '/S',\"/D=$dir\" -Wait",
+            "Remove-Item \"$dir\\$fname\""
+        ]
+    },
     "shortcuts": [
         [
             "UURemote.exe",
@@ -18,7 +23,7 @@
         "regex": "UURemote_Setup_([\\d.]+)_\\d+_gwqd\\.exe"
     },
     "autoupdate": {
-        "url": "https://api.nrd.nie.163.com/api/v1/release/dl/1?channel=gwqd#/dl.7z",
+        "url": "https://api.nrd.nie.163.com/api/v1/release/dl/1?channel=gwqd",
         "hash": {
             "mode": "download"
         }
