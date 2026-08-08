@@ -1,5 +1,5 @@
 {
-    "version": "0.88.0",
+    "version": "0.88.1",
     "description": "为您喜爱的终端提供华丽的 AI 编程智能体",
     "homepage": "https://github.com/charmbracelet/crush",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/charmbracelet/crush/releases/download/v0.88.0/crush_0.88.0_Windows_x86_64.zip",
-            "hash": "8e30add5f02e2f183272dbbe30975d6499801da3828bc237e5bec1b3d20c8ce0"
+            "url": "https://github.com/charmbracelet/crush/releases/download/v0.88.1/crush_0.88.1_Windows_x86_64.zip",
+            "hash": "69f572bbf0b1e8f76c91d2e75ba8ed7747dae47c39be383361c797cbc0e55b48"
         },
         "arm64": {
-            "url": "https://github.com/charmbracelet/crush/releases/download/v0.88.0/crush_0.88.0_Windows_arm64.zip",
-            "hash": "76cf40e60c25d285ea845221687000caecaa7e938e94a7502ef90cf0b30032a7"
+            "url": "https://github.com/charmbracelet/crush/releases/download/v0.88.1/crush_0.88.1_Windows_arm64.zip",
+            "hash": "737f38f62411ed8db02fc1585f90b7c38eceaebab594a364b1782ed07dc36c69"
         }
     },
     "bin": "crush.exe",
